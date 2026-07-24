@@ -160,6 +160,57 @@
 	top: var(---pseudo-after-top,-85%);
 	box-shadow: var(--pseudo-after-hoffset, 2px) var(--pseudo-after-voffset, 2px) 0 0 rgb(85 64 175);
 }
+.github_container{
+	position:relative;
+	width:var(--container-width,100px);
+	height:var(--container-height,100px);
+	border-radius:50%;
+	background-color:#000;	
+}
+.top{
+	position:absolute;
+	width:var(--width,65px);
+	height:var(--height,50px);
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	border-radius:45%;
+	background-color:#fff;
+}
+.top:before{
+	content:"";
+	position:absolute;
+	top:-5;
+	height: var(--pseudo-before-height,25px);
+	width: var(--pseudo-before-width,25px);
+	border-radius: 0% 95%;
+	background-color: #fff;			
+}
+
+.top:after{
+	 content:"";
+	 position:absolute;
+	 top:-5;
+	 right:0;
+	 height: var(--pseudo-after-height,25px);
+	 width: var(--pseudo-after-width,25px);
+	 border-radius: 95% 0%;
+	 background-color: #fff;		 
+}
+
+.bottom{
+	position:absolute;
+	width:var(--width,30px);
+	height:var(--height,30px);
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	border-radius:50% 50% 0 0;
+	background-color:#fff;
+}
 </style>
 <script>
 const testimonials = [
@@ -322,6 +373,27 @@ class Icon {
     this.param = param;
   }
 
+  github(){
+	const github = document.querySelector(this.param.selector);
+	const top = github.querySelector('.top');
+	const bottom = github.querySelector('.bottom');
+	
+	github.style.setProperty('--container-height',this.param.height + 'px');
+	github.style.setProperty('--container-width',this.param.width + 'px');
+
+	top.style.setProperty('--height',Math.floor(50 * this.param.height / 100) + 'px');
+	top.style.setProperty('--width',Math.floor(65 * this.param.height / 100) + 'px');
+	
+	bottom.style.setProperty('--height',Math.floor(30 * this.param.height / 100) + 'px');
+	bottom.style.setProperty('--width',Math.floor(30 * this.param.height / 100) + 'px');
+	
+	top.style.setProperty('--pseudo-before-height',Math.floor(25 * this.param.height / 100) + 'px');
+	top.style.setProperty('--pseudo-before-width',Math.floor(25 * this.param.height / 100) + 'px');
+	
+	top.style.setProperty('--pseudo-after-height',Math.floor(30 * this.param.height / 100) + 'px');
+	top.style.setProperty('--pseudo-after-width',Math.floor(30 * this.param.height / 100) + 'px');
+  }
+
   mail() {
 	const mail = document.querySelector(this.param.selector);
 	const radius = Math.floor(this.param.height / 10);
@@ -382,6 +454,9 @@ function onload(){
 	slideIndex = Math.floor(Math.random() * len); 
 	showSlides(slideIndex);
 	
+	const gitHubIcon = new Icon({selector:".github_container",height:"40",width:"40"});
+	gitHubIcon.github();
+	
 	const mailIcon = new Icon({selector:".letter",height:"40",width:"50"});
 	mailIcon.mail();
 	
@@ -411,6 +486,16 @@ function onload(){
 										<span>Devendra Maharjan</span>	
 									</div>
 								</div>
+							</li>
+							<li class="item">
+								<a href="https://github.com/devendra-m">
+									<div class="github_container">
+										<div class="top">
+										</div>
+										<div class="bottom">
+										</div>
+									</div>
+								</a>
 							</li>
 							<li class="item">
 								<div class="mail">
