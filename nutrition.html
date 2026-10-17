@@ -2,7 +2,7 @@
   async function fetchData() {
     var foodData = await fetch('https://devendra-m.github.io/web/FoodData_Central_foundation_food_json_2025-12-18.json');
    // var foodData = await fetch('data.json')
-    if (foodData.ok) {
+    if (foodData.ok) { 
         const data = await foodData.json();
         console.log(data); // Your parsed JSON object
     //  document.getElementById("json").innerHTML = foodData.json.id;
