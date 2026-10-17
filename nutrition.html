@@ -1,4 +1,7 @@
 <script>
-  var foodData = fetch('FoodData_Central_foundation_food_json_2025-12-18.json');
-  console.log(foodData);
+  async function fetchData() {
+    var foodData = await fetch('FoodData_Central_foundation_food_json_2025-12-18.json');
+    console.log(foodData);
+  }
 </script>
+<body onload="fetchData()"></body>
