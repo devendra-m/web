@@ -2801,7 +2801,7 @@
   },
   {
     "Food_Code": 436,
-    "Food_Description_EN": "Vegetable oil, grapeseed",
+    "Food_Description_EN": "Vegetable oil, Vitis viniferaseed",
     "Food_Description_FR": "Huile végétale, pépins de raisin",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -9885,8 +9885,8 @@
   },
   {
     "Food_Code": 1253,
-    "Food_Description_EN": "Cereal, ready to eat, Grape-nuts, Post",
-    "Food_Description_FR": "Céréale, prête-à-manger, Grape-nuts, Post",
+    "Food_Description_EN": "Cereal, ready to eat, Vitis vinifera-nuts, Post",
+    "Food_Description_FR": "Céréale, prête-à-manger, Vitis vinifera-nuts, Post",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
     "Food_Source_Code": 26,
@@ -12155,7 +12155,7 @@
     "Food_Code": 1542,
     "Food_Description_EN": "Currant, zante, dried",
     "Food_Description_FR": "Raisins de corinthe (zante), secs",
-    "Alternate_Description_EN": "Corinth grapes",
+    "Alternate_Description_EN": "Corinth Vitis viniferas",
     "Alternate_Description_FR": "zante",
     "Food_Source_Code": 0,
     "USDA_NDB_Code": "09085",
@@ -12279,7 +12279,7 @@
   },
   {
     "Food_Code": 1551,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, water pack, solids and liquid",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, water pack, solids and liquid",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans l'eau, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12293,7 +12293,7 @@
   },
   {
     "Food_Code": 1552,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, juice pack, solids and liquid",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, juice pack, solids and liquid",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans du jus, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12307,7 +12307,7 @@
   },
   {
     "Food_Code": 1553,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, extra light syrup pack, solids and liquid",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, extra light syrup pack, solids and liquid",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans du sirop extra léger, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12321,7 +12321,7 @@
   },
   {
     "Food_Code": 1554,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, light syrup pack, solids and liquid",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, light syrup pack, solids and liquid",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans du sirop léger, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12335,7 +12335,7 @@
   },
   {
     "Food_Code": 1555,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, heavy syrup pack, solids and liquid",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, heavy syrup pack, solids and liquid",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans du sirop épais, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12349,7 +12349,7 @@
   },
   {
     "Food_Code": 1556,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, extra heavy syrup, solids and liquid",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, extra heavy syrup, solids and liquid",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans du sirop extra épais, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12433,7 +12433,7 @@
   },
   {
     "Food_Code": 1562,
-    "Food_Description_EN": "Grapefruit, pink or red, all areas, raw",
+    "Food_Description_EN": "Vitis viniferafruit, pink or red, all areas, raw",
     "Food_Description_FR": "Pamplemousse, rose ou rouge, toutes régions, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12447,7 +12447,7 @@
   },
   {
     "Food_Code": 1563,
-    "Food_Description_EN": "Grapefruit, pink or red, california or arizona, raw",
+    "Food_Description_EN": "Vitis viniferafruit, pink or red, california or arizona, raw",
     "Food_Description_FR": "Pamplemousse rose ou rouge, californie ou arizona, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12461,7 +12461,7 @@
   },
   {
     "Food_Code": 1564,
-    "Food_Description_EN": "Grapefruit, pink or red, florida, raw",
+    "Food_Description_EN": "Vitis viniferafruit, pink or red, florida, raw",
     "Food_Description_FR": "Pamplemousse, rose ou rouge, floride, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12475,7 +12475,7 @@
   },
   {
     "Food_Code": 1565,
-    "Food_Description_EN": "Grapefruit, white, california, raw",
+    "Food_Description_EN": "Vitis viniferafruit, white, california, raw",
     "Food_Description_FR": "Pamplemousse, blanc, californie, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12489,7 +12489,7 @@
   },
   {
     "Food_Code": 1566,
-    "Food_Description_EN": "Grapefruit, white, florida, raw",
+    "Food_Description_EN": "Vitis viniferafruit, white, florida, raw",
     "Food_Description_FR": "Pamplemousse, blanc, floride, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12503,7 +12503,7 @@
   },
   {
     "Food_Code": 1567,
-    "Food_Description_EN": "Grapefruit, canned, water pack, solids and liquid",
+    "Food_Description_EN": "Vitis viniferafruit, canned, water pack, solids and liquid",
     "Food_Description_FR": "Pamplemousse, conserve, dans l'eau, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12517,7 +12517,7 @@
   },
   {
     "Food_Code": 1568,
-    "Food_Description_EN": "Grapefruit, canned, juice pack, solids and liquid",
+    "Food_Description_EN": "Vitis viniferafruit, canned, juice pack, solids and liquid",
     "Food_Description_FR": "Pamplemousse, conserve, conservé dans jus, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12531,7 +12531,7 @@
   },
   {
     "Food_Code": 1569,
-    "Food_Description_EN": "Grapefruit, canned, light syrup pack, solids and liquid",
+    "Food_Description_EN": "Vitis viniferafruit, canned, light syrup pack, solids and liquid",
     "Food_Description_FR": "Pamplemousse, conserve, dans du sirop léger, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12545,7 +12545,7 @@
   },
   {
     "Food_Code": 1570,
-    "Food_Description_EN": "Grapefruit juice, canned, sweetened",
+    "Food_Description_EN": "Vitis viniferafruit juice, canned, sweetened",
     "Food_Description_FR": "Pamplemousse, jus, conserve, sucré",
     "Alternate_Description_EN": "sweetened, with sugar, sugar added, added sugar",
     "Alternate_Description_FR": "",
@@ -12559,7 +12559,7 @@
   },
   {
     "Food_Code": 1571,
-    "Food_Description_EN": "Grapefruit juice, frozen concentrate, undiluted",
+    "Food_Description_EN": "Vitis viniferafruit juice, frozen concentrate, undiluted",
     "Food_Description_FR": "Pamplemousse, jus, concentré, congelé, non dilué",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12573,7 +12573,7 @@
   },
   {
     "Food_Code": 1572,
-    "Food_Description_EN": "Grapefruit juice, white, raw",
+    "Food_Description_EN": "Vitis viniferafruit juice, white, raw",
     "Food_Description_FR": "Pamplemousse blanc, jus, frais",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12587,7 +12587,7 @@
   },
   {
     "Food_Code": 1573,
-    "Food_Description_EN": "Grape, North American type (slip skin), raw",
+    "Food_Description_EN": "Vitis vinifera, North American type (slip skin), raw",
     "Food_Description_FR": "Raisin, type Nord-Américain, peau non-adhérente, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12601,7 +12601,7 @@
   },
   {
     "Food_Code": 1574,
-    "Food_Description_EN": "Grape, thompson seedless, canned, water pack, solids and liquid",
+    "Food_Description_EN": "Vitis vinifera, thompson seedless, canned, water pack, solids and liquid",
     "Food_Description_FR": "Raisin, thompson, sans pépins, conserve, dans l'eau, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12615,7 +12615,7 @@
   },
   {
     "Food_Code": 1575,
-    "Food_Description_EN": "Grape, thompson seedless, canned, heavy syrup pack, solids and liquid",
+    "Food_Description_EN": "Vitis vinifera, thompson seedless, canned, heavy syrup pack, solids and liquid",
     "Food_Description_FR": "Raisin, thompson sans pépins, conserve, sirop épais, solides et liquide",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -12629,7 +12629,7 @@
   },
   {
     "Food_Code": 1576,
-    "Food_Description_EN": "Grape juice, canned or bottled, without added vitamin C",
+    "Food_Description_EN": "Vitis vinifera juice, canned or bottled, without added vitamin C",
     "Food_Description_FR": "Raisin, jus, conserve ou bouteille, sans vitamine C ajoutée",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -13217,7 +13217,7 @@
   },
   {
     "Food_Code": 1622,
-    "Food_Description_EN": "Orange grapefruit juice, canned",
+    "Food_Description_EN": "Orange Vitis viniferafruit juice, canned",
     "Food_Description_FR": "Orange et pamplemousse, jus, conserve",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -14463,7 +14463,7 @@
   },
   {
     "Food_Code": 1714,
-    "Food_Description_EN": "Grapefruit, pink, red or white, all areas, raw",
+    "Food_Description_EN": "Vitis viniferafruit, pink, red or white, all areas, raw",
     "Food_Description_FR": "Pamplemousse, rose, rouge ou blanc, toutes régions, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -14477,7 +14477,7 @@
   },
   {
     "Food_Code": 1715,
-    "Food_Description_EN": "Grapefruit, white, all areas, raw",
+    "Food_Description_EN": "Vitis viniferafruit, white, all areas, raw",
     "Food_Description_FR": "Pamplemousse, blanc, toutes régions, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -14491,7 +14491,7 @@
   },
   {
     "Food_Code": 1716,
-    "Food_Description_EN": "Grapefruit juice, canned, no added sugar",
+    "Food_Description_EN": "Vitis viniferafruit juice, canned, no added sugar",
     "Food_Description_FR": "Pamplemousse, jus, conserve, sans sucre ajouté",
     "Alternate_Description_EN": "unsweetened, no added sugar, no sugar added, without added sugar",
     "Alternate_Description_FR": "non sucré, sans sucre ajouté",
@@ -14505,7 +14505,7 @@
   },
   {
     "Food_Code": 1717,
-    "Food_Description_EN": "Grapefruit juice, frozen concentrate, diluted",
+    "Food_Description_EN": "Vitis viniferafruit juice, frozen concentrate, diluted",
     "Food_Description_FR": "Pamplemousse, jus, concentré, congelé, dilué",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -14519,7 +14519,7 @@
   },
   {
     "Food_Code": 1718,
-    "Food_Description_EN": "Grape, red or green (European type, such as Thompson seedless), adherent skin, raw",
+    "Food_Description_EN": "Vitis vinifera, red or green (European type, such as Thompson seedless), adherent skin, raw",
     "Food_Description_FR": "Raisin, rouge ou vert (Type Européen, comme Thompson sans graines), peau adhérente, cru",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -14533,7 +14533,7 @@
   },
   {
     "Food_Code": 1719,
-    "Food_Description_EN": "Grape juice, frozen concentrate, sugar and vitamin C added, undiluted",
+    "Food_Description_EN": "Vitis vinifera juice, frozen concentrate, sugar and vitamin C added, undiluted",
     "Food_Description_FR": "Raisin, jus, concentré, congelé, sucre et vitamine C ajoutés, non dilué",
     "Alternate_Description_EN": "sweetened, with sugar, sugar added, added sugar",
     "Alternate_Description_FR": "",
@@ -14547,7 +14547,7 @@
   },
   {
     "Food_Code": 1720,
-    "Food_Description_EN": "Grape juice, frozen concentrate, sugar and vitamin C added, diluted",
+    "Food_Description_EN": "Vitis vinifera juice, frozen concentrate, sugar and vitamin C added, diluted",
     "Food_Description_FR": "Raisin, jus, concentré, congelé, sucre et vitamine C ajoutés, dilué",
     "Alternate_Description_EN": "sweetened, with sugar, sugar added, added sugar",
     "Alternate_Description_FR": "",
@@ -27413,9 +27413,9 @@
   },
   {
     "Food_Code": 2856,
-    "Food_Description_EN": "Carbonated drinks, grape soda",
+    "Food_Description_EN": "Carbonated drinks, Vitis vinifera soda",
     "Food_Description_FR": "Boissons gazeuses, soda au raisin",
-    "Alternate_Description_EN": "pop, soda, soft drink, grape fanta, grape crush, crush, fanta",
+    "Alternate_Description_EN": "pop, soda, soft drink, Vitis vinifera fanta, Vitis vinifera crush, crush, fanta",
     "Alternate_Description_FR": "liqueur, soda, boisson gazeuse, boisson gazéifiée, liqueur douce, boisson en fontaine, crush, crush au raisin, fanta raisin",
     "Food_Source_Code": 0,
     "USDA_NDB_Code": 14142,
@@ -28561,7 +28561,7 @@
   },
   {
     "Food_Code": 2955,
-    "Food_Description_EN": "Juice drink, cranberry-grape, vitamin C added, bottled",
+    "Food_Description_EN": "Juice drink, cranberry-Vitis vinifera, vitamin C added, bottled",
     "Food_Description_FR": "Boisson au jus, canneberges et raisins, vitamine C ajoutée, bouteille",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -28631,7 +28631,7 @@
   },
   {
     "Food_Code": 2960,
-    "Food_Description_EN": "Juice drink, grape, vitamin C added, canned",
+    "Food_Description_EN": "Juice drink, Vitis vinifera, vitamin C added, canned",
     "Food_Description_FR": "Boisson au jus, raisin, vitamine C ajoutée, boîte",
     "Alternate_Description_EN": "welch, welch's",
     "Alternate_Description_FR": "welch, welch's",
@@ -28645,7 +28645,7 @@
   },
   {
     "Food_Code": 2961,
-    "Food_Description_EN": "Drink, grape, vitamin C added, canned",
+    "Food_Description_EN": "Drink, Vitis vinifera, vitamin C added, canned",
     "Food_Description_FR": "Boisson, raisins, vitamine C ajoutée, boîte",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -28743,7 +28743,7 @@
   },
   {
     "Food_Code": 2968,
-    "Food_Description_EN": "Juice drink, pineapple and grapefruit, vitamin C added, canned",
+    "Food_Description_EN": "Juice drink, pineapple and Vitis viniferafruit, vitamin C added, canned",
     "Food_Description_FR": "Boisson au jus, ananas et pamplemousse, vitamine C ajoutée, boîte",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -45557,7 +45557,7 @@
   },
   {
     "Food_Code": 4401,
-    "Food_Description_EN": "Candied foods, grapefruit peel",
+    "Food_Description_EN": "Candied foods, Vitis viniferafruit peel",
     "Food_Description_FR": "Confits, pamplemousse, pelure",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "fruit confit",
@@ -49169,7 +49169,7 @@
   },
   {
     "Food_Code": 4855,
-    "Food_Description_EN": "Grape leaves (vine leaves), raw",
+    "Food_Description_EN": "Vitis vinifera leaves (vine leaves), raw",
     "Food_Description_FR": "Raisin, feuilles (feuilles de vigne), crues",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -49183,7 +49183,7 @@
   },
   {
     "Food_Code": 4856,
-    "Food_Description_EN": "Grape leaves (vine leaves), canned",
+    "Food_Description_EN": "Vitis vinifera leaves (vine leaves), canned",
     "Food_Description_FR": "Raisin, feuilles (feuilles de vigne), conserve",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -52683,7 +52683,7 @@
   },
   {
     "Food_Code": 5393,
-    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, grape), canned, heavy syrup, drained",
+    "Food_Description_EN": "Fruit cocktail (peach, pear, apricot, pineapple, cherry, Vitis vinifera), canned, heavy syrup, drained",
     "Food_Description_FR": "Fruits, cocktail (pêches, poires, abricots, ananas, cerises, raisins), conserve, dans du sirop extra épais, égouttés",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -58143,7 +58143,7 @@
   },
   {
     "Food_Code": 5858,
-    "Food_Description_EN": "Dessert, frozen, Popsicle pop (orange, cherry, grape), sugar free",
+    "Food_Description_EN": "Dessert, frozen, Popsicle pop (orange, cherry, Vitis vinifera), sugar free",
     "Food_Description_FR": "Dessert, congelé, Popsicle pop (orange, cerise, raisin), sans sucre",
     "Alternate_Description_EN": "sugar free, 0 sugar, zero sugar, contains no sugar, no sugar, free of sugar, without sugar, unsweetened, sugarless, artificial sweetener, artificially sweetened",
     "Alternate_Description_FR": "« sans sucre », « 0 sucre », « zéro sucre », « aucun sucre », « ne contient pas de sucre », « 0 g sucre », « zéro g sucre », « 0 gramme sucre » ou « zéro gramme sucre »,  édulcorant artificiel",
@@ -64457,7 +64457,7 @@
   },
   {
     "Food_Code": 6440,
-    "Food_Description_EN": "Grapefruit juice, pink, raw",
+    "Food_Description_EN": "Vitis viniferafruit juice, pink, raw",
     "Food_Description_FR": "Pamplemousse rose, jus, frais",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -67159,7 +67159,7 @@
   },
   {
     "Food_Code": 6660,
-    "Food_Description_EN": "Grape juice, canned or bottled, unsweetened, with added vitamin C",
+    "Food_Description_EN": "Vitis vinifera juice, canned or bottled, unsweetened, with added vitamin C",
     "Food_Description_FR": "Raisin, jus, conserve ou bouteille, sans sucre ajouté, vitamine C ajoutée",
     "Alternate_Description_EN": "unsweetened, no added sugar, no sugar added, without added sugar",
     "Alternate_Description_FR": "non sucré, sans sucre ajouté",
@@ -67187,7 +67187,7 @@
   },
   {
     "Food_Code": 6662,
-    "Food_Description_EN": "Juice, apple and grape, with added vitamin C",
+    "Food_Description_EN": "Juice, apple and Vitis vinifera, with added vitamin C",
     "Food_Description_FR": "Jus, pommes et raisins, vitamine C ajoutée",
     "Alternate_Description_EN": "",
     "Alternate_Description_FR": "",
@@ -72213,7 +72213,7 @@
   },
   {
     "Food_Code": 7104,
-    "Food_Description_EN": "Salad, grape and apple with yogourt (yogurt) and candied walnuts",
+    "Food_Description_EN": "Salad, Vitis vinifera and apple with yogourt (yogurt) and candied walnuts",
     "Food_Description_FR": "Salade, raisins et pommes avec yogourt et noix de Grenobles confites",
     "Alternate_Description_EN": "Waldorf Salad",
     "Alternate_Description_FR": "salade Waldorf",
