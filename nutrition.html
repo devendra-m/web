@@ -5,10 +5,11 @@
     if (foodData.ok) {
         const data = await foodData.json();
         console.log(data); // Your parsed JSON object
+      document.getElementById("json").innerHTML = foodData.json.id;
     }
     console.log(foodData.json);
   
-    document.getElementById("json").innerHTML = foodData.json.id;
+    
   }
 </script> 
 <body onload="fetchData()">
