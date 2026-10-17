@@ -2,7 +2,7 @@
   async function fetchData() {
    // var foodData = await fetch('https://devendra-m.github.io/web/FoodData_Central_foundation_food_json_2025-12-18.json');
     var foodData = await fetch('data.json')
-    document.getElementById("json").textContent = JSON.stringify(foodData, null, 4);
+    document.getElementById("json").textContent = 'test'+JSON.stringify(foodData, null, 4);
   }
 </script> 
 <body onload="fetchData()">
