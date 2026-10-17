@@ -1,5 +1,3 @@
-<script>
-
 class Icon {
   param;
  
@@ -93,5 +91,3 @@ function onload(){
 	const linkedIcon = new Icon({selector:".container",height:"40",width:"40"});
 	linkedIcon.linked();
 }
-
-</script>
