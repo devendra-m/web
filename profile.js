@@ -83,11 +83,7 @@ class Icon {
 }
 
 function onload(){
-	len = createTestimonials();
-	testimonialsSelect();
-	slideIndex = Math.floor(Math.random() * len); 
-	showSlides(slideIndex);
-	
+
 	const gitHubIcon = new Icon({selector:".github_container",height:"40",width:"40"});
 	gitHubIcon.github();
 	
