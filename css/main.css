@@ -11,11 +11,11 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.menu .items{display:-webkit-box;list-style-type:none;padding-left:0px}
 	.logo{position:absolute;margin:0px;top:0px;bottom:0px;padding:0px;list-style-type:none;}
 	.logo li{height: 100%;}
-	.name{position:abolute;margin:auto;top:0;bottom:0;height:20px;font-size:20px}
+	.menu.name{position:abolute;margin:auto;top:0;bottom:0;height:20px;font-size:20px}
 	.comp {position: absolute;color:#ffffff;font-size:17px;top: 0;bottom: 0;margin: auto;height: 40px;}
 	.comp span{font-size:34px;font-weight:bold}
-	.name_container{position: relative;height: 100%;width: 180px;}
-	.name{position:absolute;margin:auto;top:0;bottom:0;height:20px}
+	.menu.name_container{position: relative;height: 100%;width: 180px;}
+	.menu .name{position:absolute;margin:auto;top:0;bottom:0;height:20px}
 	.menu{padding-right:20px;color:#ffffff}
 	.bottom{background:rgb(85 64 175);width:100%;height:40px;margin-top:80px}
 	.item{margin:0px;padding-right:10px}
