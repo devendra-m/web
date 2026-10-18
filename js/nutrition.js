@@ -59,12 +59,21 @@ const Foodname = (function(){
 				var add = Main.query(document,'.food .add');
 				
 				add.addEventListener('click', (event) => {
-					const row = event.target.closest('li.row');
+					
+					const rows = Main.query(document,'.food li.row');
+					//const row = Main.query(document,'ul.template');
+					
+					const lastRow  = rows.at(-1); 
+					
+					//lastRow.after(row);
+					
+					//Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
 					
 					const li = Main.newElem('li',{'class':'row'});	
-					li.innerHTML = row.innerHTML;
+					li.innerHTML = lastRow.innerHTML;
 					
-					row.after(li);
+					lastRow.after(li);
+					//row.after(li);
 				});
 
 				name.addEventListener('input', (event) => {
