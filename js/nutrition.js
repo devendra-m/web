@@ -83,7 +83,7 @@ const Foodname = (function(){
 							Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
 						}
 					}
-					Main.subElem(document,[{'e':ul}]);
+					Main.subElem(event.target.parentElement,[{'e':ul}]);
 				});												
 																	
 				
