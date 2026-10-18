@@ -32,7 +32,11 @@ const Main = (function(){
 			return elem.querySelectorAll(selector);
 		},
 		
-		onload(){				
+		onload(){			
+			Icon.github({selector:".github_container",height:"40",width:"40"});
+			Icon.mail({selector:".letter",height:"40",width:"50"});
+			Icon.linked({selector:".container",height:"40",width:"40"});		
+			
 			Foodname.load();
 		}
 	}
