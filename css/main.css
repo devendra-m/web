@@ -34,7 +34,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.food ul.items li{padding:5px 10px}
 	.food ul.items li:hover{background:#ddd;cursor:pointer}
 	.food .name{width:350px}	
-	.food .weightGram{width:1100px}	
+	.food .weightGram{width:110px}	
 	.food .rows li{list-style-type:none;}
 	.food .rows li.row li{display:inline-block;height:20px;padding:5px 10px;}
 	.food .rows li.column-1 {width:350px}
