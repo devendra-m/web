@@ -38,6 +38,7 @@ const Main = (function(){
 	}
 })();
 
+window.promise.food = null;
 
 const Foodname = (function(){
 	const foodUrl = '/data/Food_Name.json';
@@ -48,24 +49,33 @@ const Foodname = (function(){
 
 			if(response.ok){
 				const foodName = await response.json();
+				window.promise.food = foodName;
 				
 				var name = Main.query(document,'.name');
-				var names = Main.query(document,'.names');
-				
-				const ul = Main.newElem('ul',{'class':'items'});
-				
-				console.log(foodName);
-				
-				for(const item of Object.values(foodName)){
-					const li = Main.newElem('li',{'class':'item'});	
-					const labelName = Main.newElem('span',{'class':'label'});
-					labelName.id = item.Food_Code;
-					labelName.innerHTML = item.Food_Description_EN;
-									
-					Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
-				}
+
+				const textInput = document.querySelector('#myTextBox');
+
+				name.addEventListener('change', (event) => {
+					var names = Main.query(document,'.names');
+					const ul = Main.newElem('ul',{'class':'items'});
+					for(const item of Object.values(foodName)){
+						
+						const regex = new RegExp(".*"+foodName+".*", "i");
+						
+						if(event.target.value.match(regex)){
+						
+							const li = Main.newElem('li',{'class':'item'});	
+							const labelName = Main.newElem('span',{'class':'label'});
+							labelName.id = item.Food_Code;
+							labelName.innerHTML = item.Food_Description_EN;
+											
+							Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
+						}
+					}
+					Main.subElem(names,[{'e':ul}]);
+				});												
 																	
-				Main.subElem(names,[{'e':ul}]);
+				
 			}					
 		}
 	}
