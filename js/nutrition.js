@@ -38,7 +38,7 @@ const Main = (function(){
 	}
 })();
 
-window.promise.food = null;
+window.promiseFood = null;
 
 const Foodname = (function(){
 	const foodUrl = '/data/Food_Name.json';
@@ -52,8 +52,6 @@ const Foodname = (function(){
 				window.promise.food = foodName;
 				
 				var name = Main.query(document,'.name');
-
-				const textInput = document.querySelector('#myTextBox');
 
 				name.addEventListener('change', (event) => {
 					var names = Main.query(document,'.names');
