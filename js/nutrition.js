@@ -42,7 +42,7 @@ const Main = (function(){
 const Foodname = (function(){
 	let foodUrl = '/data/Food_Name.json';
 	return {
-		await load(){
+		async load(){
 
 			const response = await fetch(foodUrl);
 			
