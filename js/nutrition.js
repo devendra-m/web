@@ -63,12 +63,17 @@ const Foodname = (function(){
 				add.addEventListener('click', (event) => {
 					
 					const rows = Main.queryAll(document,'.food li.row');
-
-					const lastRow  = rows[rows.length-2]; 	
+					const row = Main.query(document,'.food ul.template');
 					
+					cont lastRow = rows[rows.length - 2];
+	
 					const li = Main.newElem('li',{'class':'row'});	
-					li.innerHTML = lastRow.innerHTML;
+					const ul = Main.newElem('ul');	
 					
+					ul.innerHTML = row.innerHTML;
+					
+					Main.subElem(li,[{'e':ul}]);
+												
 					lastRow.after(li);
 				});				
 
