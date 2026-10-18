@@ -41,6 +41,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.food .rows li.column-2 {width:100px}
 	.food .rows li.column-3 {width:100px}
 	ul{list-style-type:none;}
+	input{height:25px}
 	
 	
 {box-sizing:border-box}

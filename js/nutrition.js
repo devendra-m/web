@@ -59,13 +59,16 @@ const Foodname = (function(){
 
 				name.addEventListener('input', (event) => {
 					
-					var names = Main.query(document,'.food .names');
 					var items = Main.query(document,'.food .items');
 					
 					if(items)
 						items.remove();
 					
 					const ul = Main.newElem('ul',{'class':'items'});
+					ul.style.position = 'absolute';
+					ul.offset().left = event.target.offset().left;
+					ul.offset().top = event.target.offset().top+event.target.offset().height;
+					
 					for(const item of Object.values(foodName)){
 						
 						const regex = new RegExp(".*"+event.target.value+".*", "i");
@@ -80,7 +83,7 @@ const Foodname = (function(){
 							Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
 						}
 					}
-					Main.subElem(names,[{'e':ul}]);
+					Main.subElem(document,[{'e':ul}]);
 				});												
 																	
 				
