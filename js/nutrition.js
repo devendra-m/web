@@ -63,7 +63,7 @@ const Foodname = (function(){
 					const rows = Main.query(document,'.food li.row');
 					//const row = Main.query(document,'ul.template');
 					
-					const lastRow  = rows.at(-1); 
+					const lastRow  = rows.at(-2); 
 					
 					//lastRow.after(row);
 					
