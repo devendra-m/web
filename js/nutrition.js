@@ -45,11 +45,9 @@ const Foodname = (function(){
 		async load(){
 
 			const response = await fetch(foodUrl);
-			
-			console.log(response);
-			
+
 			if(response.ok){
-				const foodName = await response.json;
+				const foodName = await response.json();
 				
 				var name = Main.query(document,'.name');
 				var names = Main.query(document,'.names');
