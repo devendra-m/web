@@ -56,7 +56,9 @@ const Foodname = (function(){
 				name.addEventListener('input', (event) => {
 					var names = Main.query(document,'.names');
 					var items = Main.query(document,'.items');
-					items.remove();
+					
+					if(items)
+						items.remove();
 					
 					const ul = Main.newElem('ul',{'class':'items'});
 					for(const item of Object.values(foodName)){
