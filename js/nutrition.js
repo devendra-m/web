@@ -54,6 +54,8 @@ const Foodname = (function(){
 				
 				const ul = Main.newElem('ul',{'class':'items'});
 				
+				console.log(foodName);
+				
 				for(const item of Object.values(foodName)){
 					const li = Main.newElem('li',{'class':'item'});	
 					const labelName = Main.newElem('span',{'class':'label'});
