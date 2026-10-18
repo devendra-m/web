@@ -57,30 +57,20 @@ const Foodname = (function(){
 				
 				var name = Main.query(document,'.food .name');
 				var add = Main.query(document,'.food .add');
+				
 				var deleteRecord = Main.query(document,'.food .delete');
 				
 				add.addEventListener('click', (event) => {
 					
 					const rows = Main.queryAll(document,'.food li.row');
-					//const row = Main.query(document,'ul.template');
-					
-					const lastRow  = rows[rows.length-2]; 
-					
-					//lastRow.after(row);
-					
-					//Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
+
+					const lastRow  = rows[rows.length-2]; 	
 					
 					const li = Main.newElem('li',{'class':'row'});	
 					li.innerHTML = lastRow.innerHTML;
 					
 					lastRow.after(li);
-					//row.after(li);
-				});
-				
-				deleteRecord.addEventListener('click', (event) => {
-					const row = event.target.closest('li.row');
-					row.remove();
-				});
+				});				
 
 				name.addEventListener('input', (event) => {
 					
@@ -113,6 +103,10 @@ const Foodname = (function(){
 																	
 				
 			}					
+		}
+		deleteRow(elem){
+			const row = elem.closest('li.row');
+			row.remove();
 		}
 	}
 })();
