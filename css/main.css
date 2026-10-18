@@ -31,7 +31,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	ul.port > li{padding-bottom:25px}
 	ul.port ul li{padding:5px}
 	ul.items{padding-left:0px;list-style-type:none}
-	ul.items li:hover{background:#ddd}
+	ul.items li:hover{display:block;background:#ddd;height:20px;cursor:pointer}
 	.food .name {height:20px;width:250px;}
 	
 	
