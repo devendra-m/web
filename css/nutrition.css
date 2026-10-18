@@ -1,4 +1,4 @@
 body{margin:0px;font-family:Arial, Helvetica, sans-serif}	
 ul.items{padding-left:0px;list-style-type:none}
-ul.items:hover{color:#fff;background:#000}
+ul.items li:hover{background:#ddd}
 .food .name {height:20px;width:100px;}
