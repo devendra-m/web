@@ -8,7 +8,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.content {padding-top:40px}
 	.content h4{font-size:30px}
 	.flex {background-color: rgb(85 64 175);display:-webkit-box;min-height: 50px;height: auto;}
-	.menu .items{display:-webkit-box;list-style-type:none;padding-left:0px}
+	.top_menu .items, .menu .items{display:-webkit-box;list-style-type:none;padding-left:0px}
 	.logo{position:absolute;margin:0px;top:0px;bottom:0px;padding:0px;list-style-type:none;}
 	.logo li{height: 100%;}
 	.menu.name{position:abolute;margin:auto;top:0;bottom:0;height:20px;font-size:20px}
