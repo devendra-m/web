@@ -63,7 +63,9 @@ const Foodname = (function(){
 					const ul = Main.newElem('ul',{'class':'items'});
 					for(const item of Object.values(foodName)){
 						
-						if(event.target.value.length > 0 && item.Food_Description_EN.indexOf(event.target.value)){
+						const regex = new RegExp(".*"+event.target.value+".*", "i");
+						
+						if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
 						
 							const li = Main.newElem('li',{'class':'item'});	
 							const labelName = Main.newElem('span',{'class':'label'});
