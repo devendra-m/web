@@ -60,6 +60,8 @@ const Foodname = (function(){
 						
 						const regex = new RegExp(".*"+foodName+".*", "i");
 						
+						console.log('test');
+						
 						if(event.target.value.match(regex)){
 						
 							const li = Main.newElem('li',{'class':'item'});	
