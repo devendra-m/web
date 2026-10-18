@@ -65,7 +65,7 @@ const Foodname = (function(){
 					const rows = Main.queryAll(document,'.food li.row');
 					const row = Main.query(document,'.food ul.template');
 					
-					cont lastRow = rows[rows.length - 2];
+					const lastRow = rows[rows.length - 2];
 	
 					const li = Main.newElem('li',{'class':'row'});	
 					const ul = Main.newElem('ul');	
