@@ -49,7 +49,7 @@ const Foodname = (function(){
 
 			if(response.ok){
 				const foodName = await response.json();
-				window.promise.food = foodName;
+				window.promiseFood = foodName;
 				
 				var name = Main.query(document,'.name');
 
