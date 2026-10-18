@@ -38,9 +38,8 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.food .rows li{list-style-type:none;}
 	.food .rows li.row li{display:inline-block;height:20px;padding:5px 10px;}
 	.food .rows li.column-1 {width:350px}
-	.food .rows li.column-2 {width:150px}
+	.food .rows li.column-2 {width:100px}
 	.food .rows li.column-3 {width:100px}	
-	.food. .template{display:none}
 	ul{list-style-type:none;}
 	input{height:20px}
 	
