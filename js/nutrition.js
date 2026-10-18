@@ -65,7 +65,7 @@ const Foodname = (function(){
 						
 						const regex = new RegExp(".*"+event.target.value+".*", "i");
 						
-						if(item.Food_Description_EN.match(regex)){
+						if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
 						
 							const li = Main.newElem('li',{'class':'item'});	
 							const labelName = Main.newElem('span',{'class':'label'});
