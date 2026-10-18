@@ -53,7 +53,7 @@ const Foodname = (function(){
 				
 				var name = Main.query(document,'.name');
 
-				name.addEventListener('change', (event) => {
+				name.addEventListener('input', (event) => {
 					var names = Main.query(document,'.names');
 					const ul = Main.newElem('ul',{'class':'items'});
 					for(const item of Object.values(foodName)){
