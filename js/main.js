@@ -1,6 +1,5 @@
 const Icon = (function() {
-  param;
- 
+
   return{
 	  github(param){
 		const github = document.querySelector(param.selector);
