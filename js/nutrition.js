@@ -56,6 +56,16 @@ const Foodname = (function(){
 				window.promiseFood = foodName;
 				
 				var name = Main.query(document,'.food .name');
+				var add = Main.query(document,'.food .add');
+				
+				add.addEventListener('click', (event) => {
+					const row = event.target.closest('li.row');
+					
+					const li = Main.newElem('li',{'class':'row'});	
+					li.innerHTML = row.innerHTML;
+					
+					row.after(li);
+				});
 
 				name.addEventListener('input', (event) => {
 					
