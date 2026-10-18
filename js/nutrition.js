@@ -103,7 +103,8 @@ const Foodname = (function(){
 																	
 				
 			}					
-		}
+		},
+		
 		deleteRow(elem){
 			const row = elem.closest('li.row');
 			row.remove();
