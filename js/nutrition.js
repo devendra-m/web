@@ -55,9 +55,6 @@ const Foodname = (function(){
 
 				name.addEventListener('input', (event) => {
 					
-					if(event.inputType === 'deleteContentBackward')
-						return false;
-					
 					var names = Main.query(document,'.names');
 					var items = Main.query(document,'.items');
 					
