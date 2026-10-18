@@ -57,6 +57,7 @@ const Foodname = (function(){
 				
 				var name = Main.query(document,'.food .name');
 				var add = Main.query(document,'.food .add');
+				var deleteRecord = Main.query(document,'.food .delete');
 				
 				add.addEventListener('click', (event) => {
 					
@@ -74,6 +75,11 @@ const Foodname = (function(){
 					
 					lastRow.after(li);
 					//row.after(li);
+				});
+				
+				deleteRecord.addEventListener('click', (event) => {
+					const row = event.target.closest('li.row');
+					row.remove();
 				});
 
 				name.addEventListener('input', (event) => {
