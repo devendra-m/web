@@ -55,12 +55,12 @@ const Foodname = (function(){
 				const foodName = await response.json();
 				window.promiseFood = foodName;
 				
-				var name = Main.query(document,'.name');
+				var name = Main.query(document,'.food .name');
 
 				name.addEventListener('input', (event) => {
 					
-					var names = Main.query(document,'.names');
-					var items = Main.query(document,'.items');
+					var names = Main.query(document,'.food .names');
+					var items = Main.query(document,'.food .items');
 					
 					if(items)
 						items.remove();
