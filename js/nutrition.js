@@ -40,11 +40,11 @@ const Main = (function(){
 
 
 const Foodname = (function(){
-	foodUrl = '/data/Food_Name.json';
+	let foodUrl = '/data/Food_Name.json';
 	return {
 		await load(){
 
-			const response = await fetch(this.foodUrl);
+			const response = await fetch(foodUrl);
 			
 			if(response.ok){
 				const foodName = response.json;
