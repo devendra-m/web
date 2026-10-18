@@ -21,7 +21,7 @@ const Icon = (function() {
 		
 		top.style.setProperty('--pseudo-after-height',Math.floor(30 * param.height / 100) + 'px');
 		top.style.setProperty('--pseudo-after-width',Math.floor(30 * param.height / 100) + 'px');
-	  }
+	  },
 
 	  mail(param) {
 		const mail = document.querySelector(param.selector);
@@ -34,7 +34,7 @@ const Icon = (function() {
 		mail.style.setProperty('--pseudo-height',param.width + 'px');
 		mail.style.setProperty('--pseudo-width',param.width + 'px');
 
-	  }
+	  },
 	  
 	  linked(param){
 		  const container = document.querySelector(param.selector);
