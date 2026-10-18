@@ -66,8 +66,8 @@ const Foodname = (function(){
 					
 					const ul = Main.newElem('ul',{'class':'items'});
 					ul.style.position = 'absolute';
-					ul.left = event.target.offset().left;
-					ul.top = event.target.offset().top+event.target.offset().height;
+					ul.left = event.target.offsetLeft;
+					ul.top = event.target.offsetTop + event.target.height;
 					
 					for(const item of Object.values(foodName)){
 						
