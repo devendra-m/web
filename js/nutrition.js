@@ -60,7 +60,7 @@ const Foodname = (function(){
 				
 				add.addEventListener('click', (event) => {
 					
-					const rows = Main.query(document,'.food li.row');
+					const rows = Main.queryAll(document,'.food li.row');
 					//const row = Main.query(document,'ul.template');
 					
 					const lastRow  = rows.at(-2); 
