@@ -111,9 +111,9 @@ const Foodname = (function(){
 				
 				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
 				
-				let tr = Main.newElem('tr');
-				let td = Main.newElem('td',{'class':'column-2'});
-				let span = Main.newElem('span',{'class':'amount'});
+				tr = Main.newElem('tr');
+				td = Main.newElem('td',{'class':'column-2'});
+				span = Main.newElem('span',{'class':'amount'});
 				span.innerHTML = '';
 			
 				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
