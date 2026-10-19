@@ -1,3 +1,4 @@
+window.promiseCache = null;
 const Foodname = (function(){
 	const foodUrl = '/data/Food_Name.json';
 	return {
@@ -7,7 +8,7 @@ const Foodname = (function(){
 
 			if(response.ok){
 				const foodName = await response.json();
-				
+				window.promiseCache = foodName;
 				
 				var add = Main.query(document,'.food .add');
 				
@@ -38,9 +39,9 @@ const Foodname = (function(){
 		loadNames(){
 			const names = Main.queryAll(document,'.food .name');
 			
-			console.log(names);
+			const foodName = window.promiseCache;
 			
-			for(const name in names){
+			for(const name of names){
 				name.addEventListener('input', (event) => {
 						
 						var items = Main.query(document,'.food .items');
