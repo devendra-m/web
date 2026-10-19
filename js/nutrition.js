@@ -8,7 +8,7 @@ const Foodname = (function(){
 			if(response.ok){
 				const foodName = await response.json();
 				
-				var name = Main.query(document,'.food .name');
+				
 				var add = Main.query(document,'.food .add');
 				
 				var deleteRecord = Main.query(document,'.food .delete');
@@ -28,41 +28,47 @@ const Foodname = (function(){
 					Main.subElem(li,[{'e':ul}]);
 												
 					lastRow.after(li);
+					
+					Foodname.loadNames();
 				});				
 
-				name.addEventListener('input', (event) => {
-					
-					var items = Main.query(document,'.food .items');
-					
-					if(items)
-						items.remove();
-					
-					const ul = Main.newElem('ul',{'class':'items'});
-					ul.style.position = 'absolute';
-					ul.left = event.target.offsetLeft;
-					ul.top = event.target.offsetTop + event.target.height;
-					
-					for(const item of Object.values(foodName)){
-						
-						const regex = new RegExp(".*"+event.target.value, "i");
-						
-						if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
-						
-							const li = Main.newElem('li',{'class':'item'});	
-							const labelName = Main.newElem('span',{'class':'label'});
-							labelName.id = item.Food_Code;
-							labelName.innerHTML = item.Food_Description_EN;
-											
-							Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
-						}
-					}
-					Main.subElem(event.target.parentElement,[{'e':ul}]);
-				});												
-																	
-				
+				this.loadNames();																														
 			}					
 		},
-		
+		loadNames(){
+			var names = Main.queryAll(document,'.food .name');
+			
+			for(const name in names){
+				name.addEventListener('input', (event) => {
+						
+						var items = Main.query(document,'.food .items');
+						
+						if(items)
+							items.remove();
+						
+						const ul = Main.newElem('ul',{'class':'items'});
+						ul.style.position = 'absolute';
+						ul.left = event.target.offsetLeft;
+						ul.top = event.target.offsetTop + event.target.height;
+						
+						for(const item of Object.values(foodName)){
+							
+							const regex = new RegExp(".*"+event.target.value, "i");
+							
+							if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
+							
+								const li = Main.newElem('li',{'class':'item'});	
+								const labelName = Main.newElem('span',{'class':'label'});
+								labelName.id = item.Food_Code;
+								labelName.innerHTML = item.Food_Description_EN;
+												
+								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
+							}
+						}
+						Main.subElem(event.target.parentElement,[{'e':ul}]);
+					});	
+				}
+		},
 		deleteRow(elem){
 			const row = elem.closest('li.row');
 			row.remove();
