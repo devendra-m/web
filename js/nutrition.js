@@ -93,7 +93,7 @@ const Foodname = (function(){
 		},
 		async submit(e){
 			
-			var foodIds = Main.queryAll(document,'input[id*="["]');		
+			var foodIds = Main.queryAll(document,'input[name=id\\[\\]');		
 			
 			console.log(foodIds);
 			
