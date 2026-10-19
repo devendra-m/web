@@ -67,7 +67,7 @@ const Foodname = (function(){
 								labelName.id = item.Food_Code;
 								labelName.innerHTML = item.Food_Description_EN;
 								
-								labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target));
+								labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target,ul));
 												
 								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
 							}
@@ -76,11 +76,13 @@ const Foodname = (function(){
 					});	
 				}
 		},
-		nameSelected(event, name){
+		nameSelected(event, name, names){
 			const foodId = Main.query(name.closest('li.row'),'[name="id[]"]');
 			
 			name.value = event.target.innerHTML;
-			foodId.value = event.target.id;			
+			foodId.value = event.target.id;		
+			
+			names.remove();	
 		},
 		deleteRow(elem){
 			const row = elem.closest('li.row');
