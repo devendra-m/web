@@ -123,7 +123,8 @@ async function onload(obj){
 		header.innerHTML = headerHtml;		
 	}	
 	
-	obj.load();
+	if(obj)
+		obj.load();
 	
 	Icon.github({selector:".github_container",height:"40",width:"40"});
 	Icon.mail({selector:".letter",height:"40",width:"50"});
