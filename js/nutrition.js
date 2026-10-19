@@ -129,7 +129,7 @@ const Foodname = (function(){
 
 															
 					const nutritionAmountRow = nutritionAmount.find(item => item.Food_Code === foodId.value);
-					console.load(nutritionAmountRow);
+					console.log(nutritionAmountRow);
 					const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
 					
 					
