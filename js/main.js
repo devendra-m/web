@@ -113,7 +113,7 @@ const Icon = (function() {
 	}
 })();
 
-async function onload(){
+async function onload(obj){
 	Icon.github({selector:".github_container",height:"40",width:"40"});
 	Icon.mail({selector:".letter",height:"40",width:"50"});
 	Icon.linked({selector:".container",height:"40",width:"40"});	
@@ -126,4 +126,6 @@ async function onload(){
 		const header = Main.query(document,'.header');
 		header.innerHTML = headerHtml;		
 	}	
+	
+	obj.load();
 }
