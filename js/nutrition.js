@@ -115,7 +115,7 @@ const Foodname = (function(){
 				span = Main.newElem('span',{'class':'amount'});
 				span.innerHTML = 'Nutrition Amount';
 								
-				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':{'e':span}}}]);
+				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(content,[{'e':table}]);								
 				
 				for(const item of Object.values(nutritionName)){		
@@ -125,14 +125,14 @@ const Foodname = (function(){
 					span = Main.newElem('span',{'class':'name'});
 					span.innerHTML = item.Nutrient_Name_EN;
 					
-					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':span}]}]);		
+					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 					
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-2'});
 					span = Main.newElem('span',{'class':'amount'});
 					span.innerHTML = '';
 				
-					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':span}]}]);		
+					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
 				
 			}
