@@ -94,6 +94,9 @@ const Foodname = (function(){
 		async submit(e){
 			
 			var foodIds = Main.queryAll(document,'input[id*="["]');		
+			
+			console.log(foodIds);
+			
 			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
 								
 			const content = Main.query(document,'.content');
