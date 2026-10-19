@@ -15,7 +15,7 @@ const Foodname = (function(){
 				
 				var deleteRecord = Main.query(document,'.food .delete');
 				
-				calculate.addEventListener('click', (e) => submit(e));
+				calculate.addEventListener('click', (e) => this.submit(e));
 				
 				add.addEventListener('click', (event) => {
 					
