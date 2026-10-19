@@ -104,13 +104,12 @@ const Foodname = (function(){
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
 				let td = Main.newElem('td',{'class':'column-1'});
-				console.log(td);
+
 				let span = Main.newElem('span',{'class':'name'});
 				span.innerHTML = 'Nutrition Name';
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				
-				tr = Main.newElem('tr');
 				td = Main.newElem('td',{'class':'column-2'});
 				span = Main.newElem('span',{'class':'amount'});
 				span.innerHTML = 'Nutrition Amount';
@@ -127,7 +126,6 @@ const Foodname = (function(){
 					
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 					
-					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-2'});
 					span = Main.newElem('span',{'class':'amount'});
 					span.innerHTML = '';
