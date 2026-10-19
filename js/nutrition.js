@@ -80,7 +80,7 @@ const Foodname = (function(){
 			const foodId = name.closest('li.row [name="id"]');
 			
 			name.value = event.target.innerHTML;
-			foodId.value = event.target.id
+			foodId.value = event.target.id;
 			
 		},
 		deleteRow(elem){
