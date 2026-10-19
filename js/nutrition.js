@@ -105,9 +105,8 @@ const Foodname = (function(){
 				const tr = Main.newElem('tr');
 				const td = Main.newElem('td');
 				
-				Main.subElem(table,[{'e':tr,'>':{'e':td}}]);		
-				
-				console.log(nutritionName);
+				Main.subElem(content,[{'e':table}]);		
+				Main.subElem(table,[{'e':tr,'>':{'e':td}}]);						
 				
 				for(const item of Object.values(nutritionName)){		
 							
@@ -125,7 +124,7 @@ const Foodname = (function(){
 				
 					Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
 				}
-				Main.subElem(content,[{'e':table}]);		
+				
 			}
 		}
 	}
