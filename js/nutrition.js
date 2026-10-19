@@ -102,17 +102,26 @@ const Foodname = (function(){
 				const nutritionName = await response.json();
 			
 				const table = Main.newElem('table',{'class':'table'});
-				const tr = Main.newElem('tr');
-				const td = Main.newElem('td');
+				let tr = Main.newElem('tr');
+				let td = Main.newElem('td',{'class':'column-1'});
+				let span = Main.newElem('span',{'class':'name'});
+				span.innerHTML = 'Nutrition Name';
 				
-				Main.subElem(content,[{'e':table}]);		
-				Main.subElem(table,[{'e':tr,'>':{'e':td}}]);						
+				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':{'e':span}}}]);		
+				
+				tr = Main.newElem('tr');
+				td = Main.newElem('td',{'class':'column-2'});
+				span = Main.newElem('span',{'class':'amount'});
+				span.innerHTML = 'Nutrition Amount';
+								
+				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':{'e':span}}]);
+				Main.subElem(content,[{'e':table}]);								
 				
 				for(const item of Object.values(nutritionName)){		
 							
-					let tr = Main.newElem('tr');
-					let td = Main.newElem('td',{'class':'column-1'});
-					let span = Main.newElem('span',{'class':'name'});
+					tr = Main.newElem('tr');
+					td = Main.newElem('td',{'class':'column-1'});
+					span = Main.newElem('span',{'class':'name'});
 					span.innerHTML = item.Nutrient_Name_EN;
 					
 					Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
