@@ -107,7 +107,10 @@ const Foodname = (function(){
 				
 				Main.subElem(table,[{'e':tr,'>':{'e':td}}]);		
 				
-				for(const item of Object.values(nutritionName)){				
+				console.log(nutritionName);
+				
+				for(const item of Object.values(nutritionName)){		
+							
 					let tr = Main.newElem('tr');
 					let td = Main.newElem('td',{'class':'column-1'});
 					let span = Main.newElem('span',{'class':'name'});
