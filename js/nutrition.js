@@ -96,30 +96,34 @@ const Foodname = (function(){
 			const contentHtml = content.innerHTML;
 			content.innerHTML = '';
 						
-			const nutritionName = await fetch('/data/Nutrient_Name.json');
+			const response = await fetch('/data/Nutrient_Name.json');
 			
-			const table = Main.newElem('table',{'class':'table'});
-			const tr = Main.newElem('tr');
-			const td = Main.newElem('td');
+			if(response.ok){
+				const nutritionName = await response.json();
 			
-			Main.subElem(table,[{'e':tr,'>':{'e':td}}]);		
-			
-			for(const item of Object.values(nutritionName)){				
-				let tr = Main.newElem('tr');
-				let td = Main.newElem('td',{'class':'column-1'});
-				let span = Main.newElem('span',{'class':'name'});
-				span.innerHTML = item.Nutrient_Name_EN;
+				const table = Main.newElem('table',{'class':'table'});
+				const tr = Main.newElem('tr');
+				const td = Main.newElem('td');
 				
-				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
+				Main.subElem(table,[{'e':tr,'>':{'e':td}}]);		
 				
-				tr = Main.newElem('tr');
-				td = Main.newElem('td',{'class':'column-2'});
-				span = Main.newElem('span',{'class':'amount'});
-				span.innerHTML = '';
-			
-				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
+				for(const item of Object.values(nutritionName)){				
+					let tr = Main.newElem('tr');
+					let td = Main.newElem('td',{'class':'column-1'});
+					let span = Main.newElem('span',{'class':'name'});
+					span.innerHTML = item.Nutrient_Name_EN;
+					
+					Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
+					
+					tr = Main.newElem('tr');
+					td = Main.newElem('td',{'class':'column-2'});
+					span = Main.newElem('span',{'class':'amount'});
+					span.innerHTML = '';
+				
+					Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
+				}
+				Main.subElem(content,[{'e':table}]);		
 			}
-			Main.subElem(content,[{'e':table}]);		
 		}
 	}
 })();
