@@ -114,7 +114,7 @@ const Foodname = (function(){
 				span = Main.newElem('span',{'class':'amount'});
 				span.innerHTML = 'Nutrition Amount';
 								
-				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':{'e':span}}]);
+				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':{'e':span}}}]);
 				Main.subElem(content,[{'e':table}]);								
 				
 				for(const item of Object.values(nutritionName)){		
