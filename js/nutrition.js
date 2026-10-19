@@ -92,15 +92,38 @@ const Foodname = (function(){
 			row.remove();
 		},
 		async submit(e){
+			
+			var foodIds = Main.queryAll(document,'input[id*="["]');		
+			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
+								
 			const content = Main.query(document,'.content');
 			const contentHtml = content.innerHTML;
 			content.innerHTML = '';
 						
 			const response = await fetch('/data/Nutrient_Name.json');
-			
-			if(response.ok){
+			const response1 = await fetch('/data/Nutrient_Amount.json');
+						
+			if(response.ok && response1.ok){
 				const nutritionName = await response.json();
+				const nutritionAmount = await response1.json();
+								
+				const nutritionAmounts = {};
+
+				for(const foodId of foodIds){	
+					const regex = new RegExp(".*\[(.*)\]", "i");
+					const match = foodId.match(regex);
+					const index = match[1];
+					//const weightGram = weightGrams[index];
+					const weightGram = Main.query(document,'weightGrams['+index+']');
 			
+					const foodWeight = weightGram.value;
+															
+					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmount.Food_Code === foodId);
+					const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
+					
+					nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+				}
+				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
 				let td = Main.newElem('td',{'class':'column-1'});
@@ -119,6 +142,8 @@ const Foodname = (function(){
 				
 				for(const item of Object.values(nutritionName)){		
 							
+					const nutritionAmountRow = nutritionAmounts.find(nutritionAmount => nutritionAmounts.Nutrition_Code === item.Nutrition_Code);
+							
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
 					span = Main.newElem('span',{'class':'name'});
@@ -128,8 +153,8 @@ const Foodname = (function(){
 					
 					td = Main.newElem('td',{'class':'column-2'});
 					span = Main.newElem('span',{'class':'amount'});
-					span.innerHTML = '';
-				
+					span.innerHTML = nutritionAmountRow.nutrition_amount;																
+										
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
 				
