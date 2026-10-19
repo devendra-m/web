@@ -107,7 +107,7 @@ const Foodname = (function(){
 				const nutritionName = await response.json();
 				const nutritionAmount = await response1.json();
 	
-				const nutritionAmounts = {};
+				const nutritionAmounts = [{}];
 				const regex = new RegExp(".*\[(.*)\]", "i");
 
 				for(const foodId of foodIds){	
@@ -121,6 +121,8 @@ const Foodname = (function(){
 															
 					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmount.Food_Code === foodId);
 					const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
+					
+					console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 					
 					nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
@@ -143,7 +145,7 @@ const Foodname = (function(){
 				
 				for(const item of Object.values(nutritionName)){		
 							
-					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmounts.Nutrition_Code === item.Nutrition_Code);
+					const nutritionAmountRow = nutritionAmounts.find(nutritionAmount => nutritionAmounts.Nutrition_Code === item.Nutrition_Code);
 							
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
