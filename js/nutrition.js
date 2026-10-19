@@ -1,48 +1,11 @@
-const Main = (function(){
-		
-	return {
-		newElem(type,params){
-			const elem = document.createElement(type);
-			
-			for(const param in params){
-				elem.setAttribute(param,params[param]);
-			}
-			
-			return elem;
-		},
-		setStyle(elem,params){		
-			for(const name in params){
-				elem.style.setProperty(name,params[name]);
-			}
-		},
-		subElem(parent,params){
-			for(const index in Object.values(params)){
-				parent.append(Object.values(params)[index]['e']);
-	
-				if(Object.values(params)[index]['>'])
-					this.subElem(Object.values(params)[index]['e'],Object.values(params)[index]['>']);			
-			}		
-													
-		},		
-		query(elem,selector){
-			return elem.querySelector(selector);
-		},
-		
-		queryAll(elem,selector){
-			return elem.querySelectorAll(selector);
-		},
-		
-		onload(){			
-			Icon.github({selector:".github_container",height:"40",width:"40"});
-			Icon.mail({selector:".letter",height:"40",width:"50"});
-			Icon.linked({selector:".container",height:"40",width:"40"});		
-			
-			Foodname.load();
-		}
-	}
-})();
 
-window.promiseFood = null;
+function onload(){			
+	Icon.github({selector:".github_container",height:"40",width:"40"});
+	Icon.mail({selector:".letter",height:"40",width:"50"});
+	Icon.linked({selector:".container",height:"40",width:"40"});		
+	
+	Foodname.load();
+}
 
 const Foodname = (function(){
 	const foodUrl = '/data/Food_Name.json';
@@ -53,7 +16,6 @@ const Foodname = (function(){
 
 			if(response.ok){
 				const foodName = await response.json();
-				window.promiseFood = foodName;
 				
 				var name = Main.query(document,'.food .name');
 				var add = Main.query(document,'.food .add');

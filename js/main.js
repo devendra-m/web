@@ -1,3 +1,39 @@
+const Main = (function(){
+		
+	return {
+		newElem(type,params){
+			const elem = document.createElement(type);
+			
+			for(const param in params){
+				elem.setAttribute(param,params[param]);
+			}
+			
+			return elem;
+		},
+		setStyle(elem,params){		
+			for(const name in params){
+				elem.style.setProperty(name,params[name]);
+			}
+		},
+		subElem(parent,params){
+			for(const index in Object.values(params)){
+				parent.append(Object.values(params)[index]['e']);
+	
+				if(Object.values(params)[index]['>'])
+					this.subElem(Object.values(params)[index]['e'],Object.values(params)[index]['>']);			
+			}		
+													
+		},		
+		query(elem,selector){
+			return elem.querySelector(selector);
+		},
+		
+		queryAll(elem,selector){
+			return elem.querySelectorAll(selector);
+		}	
+	}
+})();
+
 const Icon = (function() {
 
   return{
@@ -77,8 +113,17 @@ const Icon = (function() {
 	}
 })();
 
-function onload(){
+async function onload(){
 	Icon.github({selector:".github_container",height:"40",width:"40"});
 	Icon.mail({selector:".letter",height:"40",width:"50"});
 	Icon.linked({selector:".container",height:"40",width:"40"});	
+	
+	const response = await fetch('/template/header.html');
+	
+	if(response.ok){
+		const headerHtml = await response.text();
+		
+		const header = Main.query(document,'.header');
+		header.innerHTML = headerHtml;		
+	}	
 }
