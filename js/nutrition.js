@@ -126,13 +126,13 @@ const Foodname = (function(){
 					const weightGram = Main.query(foodId.closest('li.row'),'.weightGram');
 					
 					const foodWeight = weightGram.value;
-					let foodNutritionAmount = 0;
-					let nutritionAmountRow = null;
+					//let foodNutritionAmount = 0;
+					//let nutritionAmountRow = null;
 
 					for(const nutrition of nutritionAmount){
-						if(nutrition.Food_Code === foodId.value){
-							
-							foodNutritionAmount = Math.floor(nutrition.Nutrition_Amount * foodWeight / 100); 
+						console.log(nutrition.Food_Code);
+						if(nutrition.Food_Code === foodId.value){							
+							const foodNutritionAmount = Math.floor(nutrition.Nutrition_Amount * foodWeight / 100); 
 							nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 							break;
 						}
