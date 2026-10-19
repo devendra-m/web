@@ -43,7 +43,9 @@ const Foodname = (function(){
 			
 			for(const name of names){
 				name.addEventListener('input', (event) => {
-						
+						if (event.defaultPrevented) {
+							return;
+						}
 						var items = Main.query(document,'.food .items');
 						
 						if(items)
