@@ -94,6 +94,7 @@ const Foodname = (function(){
 		async submit(e){
 			const content = Main.query(document,'.content');
 			const contentHtml = content.innerHTML;
+			content.innerHTML = '';
 						
 			const nutritionName = await fetch('/data/Nutrient_Name.json');
 			
