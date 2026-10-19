@@ -36,7 +36,9 @@ const Foodname = (function(){
 			}					
 		},
 		loadNames(){
-			var names = Main.queryAll(document,'.food .name');
+			const names = Main.queryAll(document,'.food .name');
+			
+			console.log(names);
 			
 			for(const name in names){
 				name.addEventListener('input', (event) => {
