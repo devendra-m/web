@@ -11,7 +11,7 @@ const Foodname = (function(){
 				window.promiseCache = foodName;
 				
 				var add = Main.query(document,'.food .add');
-				var calculate = Main.query(document,'food .calculate');
+				var calculate = Main.query(document,'.food .calculate');
 				
 				var deleteRecord = Main.query(document,'.food .delete');
 				
