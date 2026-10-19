@@ -66,6 +66,8 @@ const Foodname = (function(){
 								const labelName = Main.newElem('span',{'class':'label'});
 								labelName.id = item.Food_Code;
 								labelName.innerHTML = item.Food_Description_EN;
+								
+								labelName.addEventListener('click',(e) => nameSelected(e,event.target));
 												
 								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
 							}
@@ -73,6 +75,13 @@ const Foodname = (function(){
 						Main.subElem(event.target.parentElement,[{'e':ul}]);
 					});	
 				}
+		},
+		nameSelected(event, name){
+			const foodId = name.closest('li.row [name="id"]');
+			
+			name.value = event.target.innerHTML;
+			foodId.value = event.target.id
+			
 		},
 		deleteRow(elem){
 			const row = elem.closest('li.row');
