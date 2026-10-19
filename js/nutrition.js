@@ -126,9 +126,10 @@ const Foodname = (function(){
 					const weightGram = Main.query(foodId.closest('li.row'),'.weightGram');
 					
 					console.log(weightGram);
-					console.log(foodId);
-					const foodWeight = weightGram.value;
+					console.log(foodId.value);
 					
+					const foodWeight = weightGram.value;
+					console.log(nutritionAmount);
 					
 															
 					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmount.Food_Code === foodId.value);
