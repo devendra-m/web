@@ -11,8 +11,11 @@ const Foodname = (function(){
 				window.promiseCache = foodName;
 				
 				var add = Main.query(document,'.food .add');
+				var calculate = Main.query(document,'food .calculate');
 				
 				var deleteRecord = Main.query(document,'.food .delete');
+				
+				calculate.addEventListener('click', (e) => submit(e));
 				
 				add.addEventListener('click', (event) => {
 					
@@ -87,6 +90,38 @@ const Foodname = (function(){
 		deleteRow(elem){
 			const row = elem.closest('li.row');
 			row.remove();
+		},
+		async submit(e){
+			const content = Main.query('.content');
+			const contentHtml = content.innerHTML;
+						
+			const nutritionName = await fetch('/data/Nutrient_Name.json');
+			
+			const table = Main.newElem('table',{'class':'table'});
+			const tr = Main.newElem('tr');
+			const td = Main.newElem('td');
+			
+			Main.subElem(table,[{'e':tr,'>':{'e':td}}]);		
+			
+			for(const item of Object.values(nutritionName)){
+				const code = item.Nutrient_Code;
+				const name = item.Nutrient_Name_EN
+				
+				const tr = Main.newElem('tr');
+				const td = Main.newElem('td',{'class':'column-1'});
+				const span = Main.newElem('span',{'class':'name'});
+				span.innerHTML = item.Nutrient_Name_EN;
+				
+				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
+				
+				const tr = Main.newElem('tr');
+				const td = Main.newElem('td',{'class':'column-2'});
+				const span = Main.newElem('span',{'class':'amount'});
+				span.innerHTML = ''
+			
+				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
+			}
+			Main.subElem(content,[{'e':table}]);		
 		}
 	}
 })();
