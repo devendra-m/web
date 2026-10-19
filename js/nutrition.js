@@ -106,9 +106,7 @@ const Foodname = (function(){
 			if(response.ok && response1.ok){
 				const nutritionName = await response.json();
 				const nutritionAmount = await response1.json();
-				
-				console.log(nutritionAmount); 
-								
+	
 				const nutritionAmounts = {};
 				const regex = new RegExp(".*\[(.*)\]", "i");
 
@@ -145,7 +143,7 @@ const Foodname = (function(){
 				
 				for(const item of Object.values(nutritionName)){		
 							
-					const nutritionAmountRow = nutritionAmounts.find(nutritionAmount => nutritionAmounts.Nutrition_Code === item.Nutrition_Code);
+					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmounts.Nutrition_Code === item.Nutrition_Code);
 							
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
