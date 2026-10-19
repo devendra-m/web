@@ -67,7 +67,7 @@ const Foodname = (function(){
 								labelName.id = item.Food_Code;
 								labelName.innerHTML = item.Food_Description_EN;
 								
-								labelName.addEventListener('click',(e) => nameSelected(e,event.target));
+								labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target));
 												
 								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
 							}
