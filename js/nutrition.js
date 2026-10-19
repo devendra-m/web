@@ -92,7 +92,7 @@ const Foodname = (function(){
 			row.remove();
 		},
 		async submit(e){
-			const content = Main.query('.content');
+			const content = Main.query(document,'.content');
 			const contentHtml = content.innerHTML;
 						
 			const nutritionName = await fetch('/data/Nutrient_Name.json');
