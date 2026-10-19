@@ -104,6 +104,7 @@ const Foodname = (function(){
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
 				let td = Main.newElem('td',{'class':'column-1'});
+				console.log(td);
 				let span = Main.newElem('span',{'class':'name'});
 				span.innerHTML = 'Nutrition Name';
 				
