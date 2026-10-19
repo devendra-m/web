@@ -130,8 +130,9 @@ const Foodname = (function(){
 					//let nutritionAmountRow = null;
 
 					for(const nutrition of nutritionAmount){
-						console.log(nutrition.Food_Code);
-						if(nutrition.Food_Code === foodId.value){							
+						
+						if(nutrition.Food_Code === foodId.value){	
+							console.log(nutrition.Food_Code);						
 							const foodNutritionAmount = Math.floor(nutrition.Nutrition_Amount * foodWeight / 100); 
 							nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 							break;
