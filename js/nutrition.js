@@ -126,15 +126,21 @@ const Foodname = (function(){
 					const weightGram = Main.query(foodId.closest('li.row'),'.weightGram');
 					
 					const foodWeight = weightGram.value;
+					let foodNutritionAmount = 0;
 
-															
-					const nutritionAmountRow = nutritionAmount.find(item => item.Food_Code === foodId.value);
-					console.log(nutritionAmountRow);
-					const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
+					for(const nutrition of nutritionAmount){
+						if(nutrition.Food_Code === foodId.value){
+							foodNutritionAmount = Math.floor(nutrition.Nutrition_Amount * foodWeight / 100); 
+							break;
+						}
+					}
+					//const nutritionAmountRow = nutritionAmount.find(item => item.Food_Code === foodId.value);
+					//console.log(nutritionAmountRow);
+					//const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
 					
 					
 				
-					console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+					//console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 					
 					nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
