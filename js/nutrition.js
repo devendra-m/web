@@ -114,15 +114,16 @@ const Foodname = (function(){
 				for(const foodId of foodIds){	
 					
 					const match = foodId.name.match(regex);
+					console.log(match);
 					const index = match[1];
 					
 					const weightGram = Main.query(document,'weightGrams['+index+']');
 			
 					const foodWeight = weightGram.value;
 					
-					console.log(foodWeight);
+					
 															
-					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmount.Food_Code === foodId);
+					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmount.Food_Code === foodId.value);
 					const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
 					
 					console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
