@@ -77,7 +77,7 @@ const Foodname = (function(){
 				}
 		},
 		nameSelected(event, name){
-			const foodId = name.closest('li.row [name="id"]');
+			const foodId = Main.query(name.closest('li.row'),'[name="id"]');
 			
 			name.value = event.target.innerHTML;
 			foodId.value = event.target.id;
