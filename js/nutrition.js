@@ -93,7 +93,7 @@ const Foodname = (function(){
 		},
 		async submit(e){
 			
-			var foodIds = Main.queryAll(document,'input[name="id[]"');		
+			var foodIds = Main.queryAll(document,'.food_id');		
 			
 			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
 								
@@ -113,13 +113,20 @@ const Foodname = (function(){
 
 				for(const foodId of foodIds){	
 					
+					/*
+					Main.query(foodId.closest('li.row'),'.weightGram');
+					
 					const match = foodId.name.match(regex);
 					console.log(match);
 					console.log(foodId.name);
 					const index = match[1];
 					
 					const weightGram = Main.query(document,'weightGrams['+index+']');
-			
+					*/
+					const weightGram = Main.query(foodId.closest('li.row'),'.weightGram');
+					
+					console.log(weightGram);
+					console.log(foodId);
 					const foodWeight = weightGram.value;
 					
 					
