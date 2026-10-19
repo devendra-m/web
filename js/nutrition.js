@@ -113,7 +113,7 @@ const Foodname = (function(){
 
 				for(const foodId of foodIds){	
 					
-					const match = foodId.match(regex);
+					const match = foodId.name.match(regex);
 					const index = match[1];
 					
 					const weightGram = Main.query(document,'weightGrams['+index+']');
