@@ -148,6 +148,8 @@ const Foodname = (function(){
 					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
 				
+				console.log(nutritionAmounts);
+				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
 				let td = Main.newElem('td',{'class':'column-1'});
