@@ -127,10 +127,13 @@ const Foodname = (function(){
 					
 					const foodWeight = weightGram.value;
 					let foodNutritionAmount = 0;
+					let nutritionAmountRow = null;
 
 					for(const nutrition of nutritionAmount){
 						if(nutrition.Food_Code === foodId.value){
+							
 							foodNutritionAmount = Math.floor(nutrition.Nutrition_Amount * foodWeight / 100); 
+							nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 							break;
 						}
 					}
@@ -142,7 +145,7 @@ const Foodname = (function(){
 				
 					//console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 					
-					nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
 				
 				const table = Main.newElem('table',{'class':'table'});
