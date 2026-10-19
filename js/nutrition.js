@@ -103,21 +103,18 @@ const Foodname = (function(){
 			
 			Main.subElem(table,[{'e':tr,'>':{'e':td}}]);		
 			
-			for(const item of Object.values(nutritionName)){
-				const code = item.Nutrient_Code;
-				const name = item.Nutrient_Name_EN
-				
-				const tr = Main.newElem('tr');
-				const td = Main.newElem('td',{'class':'column-1'});
-				const span = Main.newElem('span',{'class':'name'});
+			for(const item of Object.values(nutritionName)){				
+				let tr = Main.newElem('tr');
+				let td = Main.newElem('td',{'class':'column-1'});
+				let span = Main.newElem('span',{'class':'name'});
 				span.innerHTML = item.Nutrient_Name_EN;
 				
 				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
 				
-				const tr = Main.newElem('tr');
-				const td = Main.newElem('td',{'class':'column-2'});
-				const span = Main.newElem('span',{'class':'amount'});
-				span.innerHTML = ''
+				let tr = Main.newElem('tr');
+				let td = Main.newElem('td',{'class':'column-2'});
+				let span = Main.newElem('span',{'class':'amount'});
+				span.innerHTML = '';
 			
 				Main.subElem(table,[{'e':tr,'>':{'e':td,'>':span}}]);		
 			}
