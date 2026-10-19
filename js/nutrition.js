@@ -44,7 +44,7 @@ const Foodname = (function(){
 					
 					for(const item of Object.values(foodName)){
 						
-						const regex = new RegExp(".*"+event.target.value+".*", "i");
+						const regex = new RegExp(".*"+event.target.value, "i");
 						
 						if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
 						
