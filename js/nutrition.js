@@ -95,8 +95,6 @@ const Foodname = (function(){
 			
 			var foodIds = Main.queryAll(document,'input[name="id[]"');		
 			
-			console.log(foodIds);
-			
 			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
 								
 			const content = Main.query(document,'.content');
@@ -121,6 +119,8 @@ const Foodname = (function(){
 					const weightGram = Main.query(document,'weightGrams['+index+']');
 			
 					const foodWeight = weightGram.value;
+					
+					console.log(foodWeight);
 															
 					const nutritionAmountRow = nutritionAmount.find(nutritionAmount => nutritionAmount.Food_Code === foodId);
 					const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
