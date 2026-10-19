@@ -109,12 +109,13 @@ const Foodname = (function(){
 				const nutritionAmount = await response1.json();
 	
 				const nutritionAmounts = [{}];
-				const regex = new RegExp(".*\[(.*)\]", "i");
+				const regex = new RegExp(".*\[(.*)\].*", "i");
 
 				for(const foodId of foodIds){	
 					
 					const match = foodId.name.match(regex);
 					console.log(match);
+					console.log(foodId.name.);
 					const index = match[1];
 					
 					const weightGram = Main.query(document,'weightGrams['+index+']');
