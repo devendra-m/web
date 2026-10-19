@@ -114,10 +114,6 @@ const Icon = (function() {
 })();
 
 async function onload(obj){
-	Icon.github({selector:".github_container",height:"40",width:"40"});
-	Icon.mail({selector:".letter",height:"40",width:"50"});
-	Icon.linked({selector:".container",height:"40",width:"40"});	
-	
 	const response = await fetch('/template/header.html');
 	
 	if(response.ok){
@@ -128,4 +124,8 @@ async function onload(obj){
 	}	
 	
 	obj.load();
+	
+	Icon.github({selector:".github_container",height:"40",width:"40"});
+	Icon.mail({selector:".letter",height:"40",width:"50"});
+	Icon.linked({selector:".container",height:"40",width:"40"});		
 }
