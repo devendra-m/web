@@ -7,7 +7,7 @@ const Foodname = (function(){
 			const response = await fetch(foodUrl);
 
 			if(response.ok){
-				const foodName = await response.text();
+				const foodName = await response.json();
 				window.promiseCache = foodName;
 				
 				var add = Main.query(document,'.food .add');
@@ -59,22 +59,12 @@ const Foodname = (function(){
 						ul.left = event.target.offsetLeft;
 						ul.top = event.target.offsetTop + event.target.height;
 						
-						const test = /\{.*?"Food_Description_EN".*?\}/g;
-						const regex = new RegExp('\{.*?"Food_Description_EN"\:\s*".*?'+event.target.value+'.*?".*?\}', "gis");
-						//const regex = new RegExp("\{.*\"Food_Description_EN\".*\}","gi");
-						const matches = foodName.matchAll(regex);
-						//console.log(foodName);
-						//console.log(matches);
-
-						//for(const item of Object.values(foodName)){
-						for(const match of matches){
-							console.log(match);
-							//const regex = new RegExp(".*"+event.target.value, "i");
+						for(const item of Object.values(foodName)){
 							
-							//if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
-								const item = JSON.parse(match[0]);								
-								
-								
+							const regex = new RegExp(".*"+event.target.value, "i");
+							
+							if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
+								const item = JSON.parse(match[0]);
 								const li = Main.newElem('li',{'class':'item'});	
 								const labelName = Main.newElem('span',{'class':'label'});
 								labelName.id = item.Food_Code;
@@ -83,9 +73,9 @@ const Foodname = (function(){
 								labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target,ul));
 												
 								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
-							//}
-						//}
+							}
 						}
+						//}
 						Main.subElem(event.target.parentElement,[{'e':ul}]);
 					});	
 				}
@@ -143,13 +133,11 @@ const Foodname = (function(){
 					//let nutritionAmountRow = null;
 					
 					const test = /\{"Food_Code":${foodId}.*?\}/g;
-					
-					const regex = new RegExp('\{"Food_Code":'+event.target.value+'.*?\}', "gi");
-					const matches = nutritionAmount.matchAll(regex);
+					const matches = nutritionAmount.matchAll(test);
 
 					for(const match of matches){
 						
-						const nutrition = JSON.parse(match[0]);
+						const nutrition = match[0];
 						const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 						nutritionAmounts.push({'nutrition_code':nutrition.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
 					}
