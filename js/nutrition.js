@@ -59,12 +59,21 @@ const Foodname = (function(){
 						ul.left = event.target.offsetLeft;
 						ul.top = event.target.offsetTop + event.target.height;
 						
-						for(const item of Object.values(foodName)){
+						//const test = /\{.*?"Food_Description_EN":${event.target.value}.*?\}/g;
+						const regex = new RegExp('\{.*?"Food_Description_EN":".*?'+event.target.value+'.*?".*?\}', "gi");
+						const matches = Food_Description_EN.matchAll(regex);
+						
+						console.log(matches);
+						
+						//for(const item of Object.values(foodName)){
+						for(const match of matches){
 							
-							const regex = new RegExp(".*"+event.target.value, "i");
+							//const regex = new RegExp(".*"+event.target.value, "i");
 							
-							if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
-							
+							//if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
+								const item = JSON.parse(match[0]);								
+								
+								
 								const li = Main.newElem('li',{'class':'item'});	
 								const labelName = Main.newElem('span',{'class':'label'});
 								labelName.id = item.Food_Code;
@@ -73,7 +82,8 @@ const Foodname = (function(){
 								labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target,ul));
 												
 								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
-							}
+							//}
+						//}
 						}
 						Main.subElem(event.target.parentElement,[{'e':ul}]);
 					});	
@@ -109,8 +119,10 @@ const Foodname = (function(){
 				const nutritionAmount = await response1.json();
 	
 				const nutritionAmounts = [{}];
-				const regex = new RegExp(".*\[(.*)\].*", "i");
-
+				
+				
+				const matches = nutritionAmount.matchAll(test);
+				
 				for(const foodId of foodIds){	
 					
 					/*
@@ -128,15 +140,17 @@ const Foodname = (function(){
 					const foodWeight = weightGram.value;
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
+					
+					const test = /\{"Food_Code":${foodId}.*?\}/g;
+					
+					const regex = new RegExp('\{"Food_Code":'+event.target.value+'.*?\}', "gi");
+					const matches = nutritionAmount.matchAll(regex);
 
-					for(const nutrition of nutritionAmount){
+					for(const match of matches){
 						
-						if(nutrition.Food_Code === foodId.value){	
-							console.log(nutrition.Food_Code);						
-							const foodNutritionAmount = Math.floor(nutrition.Nutrition_Amount * foodWeight / 100); 
-							nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
-							break;
-						}
+						const nutrition = JSON.parse(match[0]);
+						const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
+						nutritionAmounts.push({'nutrition_code':nutrition.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
 					}
 					//const nutritionAmountRow = nutritionAmount.find(item => item.Food_Code === foodId.value);
 					//console.log(nutritionAmountRow);
@@ -148,8 +162,6 @@ const Foodname = (function(){
 					
 					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
-				
-				console.log(nutritionAmounts);
 				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
@@ -168,9 +180,13 @@ const Foodname = (function(){
 				Main.subElem(content,[{'e':table}]);								
 				
 				for(const item of Object.values(nutritionName)){		
-							
-					const nutritionAmountRow = nutritionAmounts.find(nutritionAmount => nutritionAmounts.Nutrition_Code === item.Nutrition_Code);
-							
+					
+					let nutritionAmountRow = 0;
+					for(const nutritionAmount of nutritionAmounts){
+						if(nutritionAmount.Nutrition_Code === item.Nutrition_Code){
+							nutritionAmountRow = nutritionAmount;
+						}
+					}
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
 					span = Main.newElem('span',{'class':'name'});
