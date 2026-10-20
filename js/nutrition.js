@@ -204,7 +204,9 @@ const Foodname = (function(){
 				span.innerHTML = 'Nutrition Amount [mcg]';
 								
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
-				Main.subElem(content,[{'e':table}]);								
+				Main.subElem(content,[{'e':table}]);		
+				
+				console.log(nutritionAmounts);						
 				
 				for(const item of Object.values(nutritionName)){		
 					
@@ -219,7 +221,7 @@ const Foodname = (function(){
 						}
 					}
 					
-					console.log(nutritionAmountRow);
+					//console.log(nutritionAmountRow);
 					
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
