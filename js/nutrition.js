@@ -51,7 +51,8 @@ const Foodname = (function(){
 							return;
 						}
 						
-						const currentTime = event.timeStamp;
+					  const currentTime = event.timeStamp;
+					  window.lastKeyTime = currentTime;
 
 					  // Calculate the interval (if it's not the very first keystroke)
 					  if (window.lastKeyTime > 0 && (window.lastKeyTime - currentTime) < 120) {
@@ -59,7 +60,7 @@ const Foodname = (function(){
 					  }
 
 					  // Update the reference for the next key press
-					  window.lastKeyTime = currentTime;
+					 
 											
 						var items = Main.query(document,'.food .items');
 						
