@@ -112,7 +112,7 @@ const Foodname = (function(){
 				const nutritionAmounts = [{}];
 				
 				
-				const matches = nutritionAmount.matchAll(test);
+				//const matches = nutritionAmount.matchAll(test);
 				
 				for(const foodId of foodIds){	
 					
