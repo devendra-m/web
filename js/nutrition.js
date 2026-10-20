@@ -143,8 +143,11 @@ const Foodname = (function(){
 					//let nutritionAmountRow = null;
 					
 					for(const item of nutritionAmount){		
-										
-						if(item.Food_Code.trim() === foodId.value.trim()){
+							
+						if(item.Food_Code === 416)
+						console.log(item);
+								
+						if(item.Food_Code === foodId.value){
 							
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
@@ -187,7 +190,7 @@ const Foodname = (function(){
 					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
 				
-				console.log(nutritionAmounts);
+				//console.log(nutritionAmounts);
 				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
@@ -207,7 +210,7 @@ const Foodname = (function(){
 				
 				for(const item of Object.values(nutritionName)){		
 					
-					console.log(nutritionAmounts );
+					//console.log(nutritionAmounts );
 					
 					let nutritionAmountRow = 0;
 					for(const nutritionAmount of nutritionAmounts){
