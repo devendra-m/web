@@ -112,7 +112,7 @@ const Foodname = (function(){
 								
 			const content = Main.query(document,'.content');
 			const contentHtml = content.innerHTML;
-			content.innerHTML = '';
+			//content.innerHTML = '';
 						
 			const response = await fetch('/data/Nutrient_Name.json');
 			const response1 = await fetch('/data/Nutrient_Amount.json');
@@ -218,8 +218,13 @@ const Foodname = (function(){
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(div,[{'e':table}]);	
+				
+				content.innerHTML = ''; 
+				
 				Main.subElem(content,[{'e':link}]);		
 				Main.subElem(content,[{'e':div}]);		
+				
+				
 				
 				//console.log(nutritionAmounts);						
 				
