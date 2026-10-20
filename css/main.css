@@ -51,7 +51,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	table td{padding:5px;border-bottom:1px solid #ddd}
 	ul{list-style-type:none;}
 	input{height:20px}	
-	.link .back{margin-bottom:50px;cursor:pointer}
+	.link .back{padding-bottom:50px;cursor:pointer}
 	
 {box-sizing:border-box}
 	
