@@ -39,8 +39,8 @@ const Icon = (function() {
   return{
 	  github(param){
 		const github = document.querySelector(param.selector);
-		const top = github.querySelector('.top');
-		const bottom = github.querySelector('.bottom');
+		const top = github.querySelector('.git_top');
+		const bottom = github.querySelector('.git_bottom');
 		
 		github.style.setProperty('--container-height',param.height + 'px');
 		github.style.setProperty('--container-width',param.width + 'px');
