@@ -59,10 +59,10 @@ const Foodname = (function(){
 						ul.left = event.target.offsetLeft;
 						ul.top = event.target.offsetTop + event.target.height;
 						
-						//const test = /\{.*?"Food_Description_EN":${event.target.value}.*?\}/g;
+						const test = /\{.*?"Food_Description_EN".*?\}/g;
 						//const regex = new RegExp('\{.*?\"Food_Description_EN\":\s*\".*?'+event.target.value+'.*?\".*?\}', "gi");
 						const regex = new RegExp('.*', "gi");
-						const matches = foodName.matchAll(regex);
+						const matches = foodName.matchAll(test);
 						console.log(foodName);
 						console.log(matches);
 
