@@ -7,7 +7,7 @@ const Foodname = (function(){
 			const response = await fetch(foodUrl);
 
 			if(response.ok){
-				const foodName = await response.json();
+				const foodName = await response.text();
 				window.promiseCache = foodName;
 				
 				var add = Main.query(document,'.food .add');
@@ -61,7 +61,7 @@ const Foodname = (function(){
 						
 						//const test = /\{.*?"Food_Description_EN":${event.target.value}.*?\}/g;
 						const regex = new RegExp('\{.*?"Food_Description_EN":".*?'+event.target.value+'.*?".*?\}', "gi");
-						const matches = Food_Description_EN.matchAll(regex);
+						const matches = foodName.matchAll(regex);
 						
 						console.log(matches);
 						
