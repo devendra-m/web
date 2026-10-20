@@ -37,7 +37,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.food .name{width:350px}	
 	.food .weightGram{width:110px}	
 	.food .rows li{list-style-type:none;}
-	.food .rows li.row li{width:100%;display:inline-block;height:20px;margin:5px 10px;}
+	.food .rows li.row li{width:100%;display:inline-block;height:20px;padding:5px 10px;}
 	.food .rows li.row ul{padding-left:0px}
 	.food .rows li.column-1 {width:350px}
 	.food .rows li.column-2 {width:110px}
