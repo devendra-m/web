@@ -141,9 +141,12 @@ const Foodname = (function(){
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
 					
-					for(const item of nutritionAmount){						
+					for(const item of nutritionAmount){		
+						console.log(item.Food_Code);
+						console.log(foodId.value);
+						break;				
 						if(item.Food_Code === foodId.value){
-							console.log('test');
+							
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
 							for(const nutrition of nutritionAmounts){
