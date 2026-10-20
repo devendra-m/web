@@ -212,6 +212,9 @@ const Foodname = (function(){
 							break;
 						}
 					}
+					
+					console.log(nutritionAmountRow);
+					
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
 					span = Main.newElem('span',{'class':'name'});
