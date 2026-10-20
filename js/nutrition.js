@@ -118,7 +118,7 @@ const Foodname = (function(){
 				const nutritionName = await response.json();
 				const nutritionAmount = await response1.json();
 	
-				let nutritionAmounts = [{}];
+				let nutritionAmounts = [];
 				
 				//const matches = nutritionAmount.matchAll(test);
 				
