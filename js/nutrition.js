@@ -157,6 +157,8 @@ const Foodname = (function(){
 								}
 							}							
 							
+							console.log('test');
+							
 							if(!found)
 								nutritionAmounts.push({'nutrition_code':item.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 								
@@ -198,7 +200,7 @@ const Foodname = (function(){
 				
 				td = Main.newElem('td',{'class':'column-2'});
 				span = Main.newElem('span',{'class':'amount'});
-				span.innerHTML = 'Nutrition Amount';
+				span.innerHTML = 'Nutrition Amount [mcg]';
 								
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(content,[{'e':table}]);								
