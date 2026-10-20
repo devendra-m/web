@@ -64,7 +64,7 @@ const Foodname = (function(){
 							const regex = new RegExp(".*"+event.target.value, "i");
 							
 							if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
-								const item = JSON.parse(match[0]);
+								//const item = JSON.parse(match[0]);
 								const li = Main.newElem('li',{'class':'item'});	
 								const labelName = Main.newElem('span',{'class':'label'});
 								labelName.id = item.Food_Code;
