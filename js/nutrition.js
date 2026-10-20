@@ -111,7 +111,8 @@ const Foodname = (function(){
 			
 			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
 								
-			const content = Main.query(document,'.food_main');
+			const content = Main.query(document,'.content');
+			const foodMain = Main.query(document,'.food_main');
 			//const contentHtml = content.innerHTML;
 			//content.innerHTML = '';
 						
@@ -201,7 +202,7 @@ const Foodname = (function(){
 				let span = Main.newElem('span',{'class':'back'});
 				span.innerHTML = 'Back';
 				
-				span.addEventListener('click',(e) => Foodname.back(content,main));
+				span.addEventListener('click',(e) => Foodname.back(foodMain,main));
 				
 				Main.subElem(link,[{'e':span}]);								
 				
@@ -224,12 +225,12 @@ const Foodname = (function(){
 				//Main.subElem(main,[{'e':div}]);		
 				
 				//content.innerHTML = ''; 
-				content.style.display = 'none';
+				foodMain.style.display = 'none';
 				
 				Main.subElem(main,[{'e':link}]);		
 				Main.subElem(main,[{'e':div}]);		
 				
-				
+				Main.subElem(content,[{'e':main}];
 				
 				//console.log(nutritionAmounts);						
 				
