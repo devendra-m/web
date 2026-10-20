@@ -147,7 +147,7 @@ const Foodname = (function(){
 						if(item.Food_Code === 416)
 						console.log(item);
 								
-						if(item.Food_Code === foodId.value){
+						if(item.Food_Code === parseInt(foodId.value)){
 							
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
