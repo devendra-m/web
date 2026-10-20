@@ -184,7 +184,7 @@ const Foodname = (function(){
 				
 					//console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 					
-					nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
 				
 				const table = Main.newElem('table',{'class':'table'});
