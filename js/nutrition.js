@@ -132,7 +132,7 @@ const Foodname = (function(){
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
 					
-					for(const item of nutritionAmount{						
+					for(const item of nutritionAmount){						
 						if(item.Food_Code === foodId.value){
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
