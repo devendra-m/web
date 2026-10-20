@@ -214,7 +214,7 @@ const Foodname = (function(){
 					
 					let nutritionAmountRow = 0;
 					for(const nutritionAmount of nutritionAmounts){
-						if(nutritionAmount.Nutrition_Code === item.Nutrient_Code){
+						if(nutritionAmount.nutrition_code === item.Nutrient_Code){
 							
 							nutritionAmountRow = nutritionAmount.nutrition_amount;
 							break;
