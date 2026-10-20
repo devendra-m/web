@@ -57,7 +57,7 @@ const Foodname = (function(){
 					  console.log(currentTime);
 					  					  					
 					  // Calculate the interval (if it's not the very first keystroke)
-					  if ((window.lastKeyTime > 0) && ((currentTime - window.lastKeyTime) < 100)) {
+					  if ((window.lastKeyTime > 0) && ((currentTime - window.lastKeyTime) < 400)) {
 						window.lastKeyTime = currentTime;
 						return;
 					  }
