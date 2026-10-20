@@ -125,6 +125,10 @@ const Foodname = (function(){
 				
 				for(const foodId of foodIds){	
 					
+					//console.log(item.Food_Code);
+						console.log(foodId.value);
+						break;
+					
 					/*
 					Main.query(foodId.closest('li.row'),'.weightGram');
 					
@@ -142,9 +146,7 @@ const Foodname = (function(){
 					//let nutritionAmountRow = null;
 					
 					for(const item of nutritionAmount){		
-						console.log(item.Food_Code);
-						console.log(foodId.value);
-						break;				
+										
 						if(item.Food_Code === foodId.value){
 							
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
