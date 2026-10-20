@@ -150,14 +150,18 @@ const Foodname = (function(){
 							
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
+							let found = false;
 							for(const nutrition of nutritionAmounts){
 								if(nutrition.nutrition_code === item.Nutrition_Code){
 									nutrition.nutrition_amount += foodNutritionAmount;
+									found = true;
 									break;
 								}
 							}							
 							
-							nutritionAmounts.push({'nutrition_code':item.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
+							if(!found)
+								nutritionAmounts.push({'nutrition_code':item.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+								
 							break;
 						}
 					}
