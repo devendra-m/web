@@ -142,8 +142,6 @@ const Foodname = (function(){
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
 					
-					console.log(foodId.value);
-					
 					for(const item of nutritionAmount){		
 										
 						if(item.Food_Code === foodId.value){
@@ -186,6 +184,8 @@ const Foodname = (function(){
 					
 					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
+				
+				console.log(nutritionAmounts);
 				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('tr');
