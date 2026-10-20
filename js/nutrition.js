@@ -62,13 +62,13 @@ const Foodname = (function(){
 						const test = /\{.*?"Food_Description_EN".*?\}/g;
 						//const regex = new RegExp('\{.*?\"Food_Description_EN\":\s*\".*?'+event.target.value+'.*?\".*?\}', "gi");
 						const regex = new RegExp('.*', "gi");
-						const matches = foodName.matchAll(test);
-						console.log(foodName);
+						const matches = foodName.matchAll(regex);
+						//console.log(foodName);
 						console.log(matches);
 
 						//for(const item of Object.values(foodName)){
 						for(const match of matches){
-							console.log(match[0]);
+							console.log(match);
 							//const regex = new RegExp(".*"+event.target.value, "i");
 							
 							//if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
