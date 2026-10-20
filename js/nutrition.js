@@ -144,7 +144,7 @@ const Foodname = (function(){
 					
 					for(const item of nutritionAmount){		
 										
-						if(item.Food_Code == foodId.value){
+						if(item.Food_Code.trim() === foodId.value.trim()){
 							
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
@@ -211,7 +211,7 @@ const Foodname = (function(){
 					
 					let nutritionAmountRow = 0;
 					for(const nutritionAmount of nutritionAmounts){
-						if(nutritionAmount.Nutrition_Code == item.Nutrition_Code){
+						if(nutritionAmount.Nutrition_Code === item.Nutrition_Code){
 							
 							nutritionAmountRow = nutritionAmount.nutrition_amount;
 							break;
