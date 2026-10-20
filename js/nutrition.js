@@ -101,8 +101,9 @@ const Foodname = (function(){
 			const row = elem.closest('li.row');
 			row.remove();
 		},
-		back(content,html){
-			content.innerHTML = html;
+		back(content,main){
+			content.style.display = 'block';
+			main.remove();
 		},
 		async submit(e){
 			
@@ -110,8 +111,8 @@ const Foodname = (function(){
 			
 			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
 								
-			const content = Main.query(document,'.content');
-			const contentHtml = content.innerHTML;
+			const content = Main.query(document,'.food_main');
+			//const contentHtml = content.innerHTML;
 			//content.innerHTML = '';
 						
 			const response = await fetch('/data/Nutrient_Name.json');
@@ -193,13 +194,14 @@ const Foodname = (function(){
 				
 				//console.log(nutritionAmounts);
 				
+				const main = Main.newElem('div',{'class':'main'});
 				const link = Main.newElem('div',{'class':'link'});
 				const div = Main.newElem('div',{'class':'nutrients'});
 				
 				let span = Main.newElem('span',{'class':'back'});
 				span.innerHTML = 'Back';
 				
-				span.addEventListener('click',(e) => Foodname.back(content,contentHtml));
+				span.addEventListener('click',(e) => Foodname.back(content,main));
 				
 				Main.subElem(link,[{'e':span}]);								
 				
@@ -219,10 +221,13 @@ const Foodname = (function(){
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(div,[{'e':table}]);	
 				
-				content.innerHTML = ''; 
+				//Main.subElem(main,[{'e':div}]);		
 				
-				Main.subElem(content,[{'e':link}]);		
-				Main.subElem(content,[{'e':div}]);		
+				//content.innerHTML = ''; 
+				content.style.display = 'none';
+				
+				Main.subElem(main,[{'e':link}]);		
+				Main.subElem(main,[{'e':div}]);		
 				
 				
 				
