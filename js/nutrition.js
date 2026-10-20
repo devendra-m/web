@@ -60,6 +60,8 @@ const Foodname = (function(){
 					  }
 					  
 					  window.lastKeyTime = currentTime;
+					  
+					  console.log('test');
 
 					  // Update the reference for the next key press
 					 
