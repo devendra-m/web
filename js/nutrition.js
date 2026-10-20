@@ -143,15 +143,18 @@ const Foodname = (function(){
 					
 					for(const item of nutritionAmount){						
 						if(item.Food_Code === foodId.value){
+							console.log('test');
 							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 							
 							for(const nutrition of nutritionAmounts){
 								if(nutrition.nutrition_code === item.Nutrition_Code){
 									nutrition.nutrition_amount += foodNutritionAmount;
+									break;
 								}
 							}							
 							
 							nutritionAmounts.push({'nutrition_code':item.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
+							break;
 						}
 					}
 					
