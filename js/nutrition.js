@@ -132,15 +132,30 @@ const Foodname = (function(){
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
 					
-					const test = /\{"Food_Code":${foodId}.*?\}/g;
+					for(const item of nutritionAmount{						
+						if(item.Food_Code === foodId.value){
+							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
+							
+							for(const nutrition of nutritionAmounts){
+								if(nutrition.nutrition_code === item.Nutrition_Code){
+									nutrition.nutrition_amount += foodNutritionAmount;
+								}
+							}							
+							
+							nutritionAmounts.push({'nutrition_code':item.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
+						}
+					}
+					
+					/*const test = /\{"Food_Code":${foodId}.*?\}/g;
 					const matches = nutritionAmount.matchAll(test);
 
+					
 					for(const match of matches){
 						
 						const nutrition = match[0];
 						const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
 						nutritionAmounts.push({'nutrition_code':nutrition.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
-					}
+					}*/
 					//const nutritionAmountRow = nutritionAmount.find(item => item.Food_Code === foodId.value);
 					//console.log(nutritionAmountRow);
 					//const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
@@ -149,7 +164,7 @@ const Foodname = (function(){
 				
 					//console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 					
-					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+					nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
 				}
 				
 				const table = Main.newElem('table',{'class':'table'});
