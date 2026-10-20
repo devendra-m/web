@@ -1,4 +1,5 @@
 window.promiseCache = null;
+window.lastKeyTime = 0;
 const Foodname = (function(){
 	const foodUrl = '/data/Food_Name.json';
 	return {
@@ -49,6 +50,17 @@ const Foodname = (function(){
 						if (event.defaultPrevented) {
 							return;
 						}
+						
+						const currentTime = event.timeStamp;
+
+					  // Calculate the interval (if it's not the very first keystroke)
+					  if ( window.lastKeyTime - currentTime < 500) {
+						return;
+					  }
+
+					  // Update the reference for the next key press
+					  window.lastKeyTime = currentTime;
+											
 						var items = Main.query(document,'.food .items');
 						
 						if(items)
