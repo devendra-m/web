@@ -52,12 +52,14 @@ const Foodname = (function(){
 						}
 						
 					  const currentTime = event.timeStamp;
-					  window.lastKeyTime = currentTime;
-
+					  					  					
 					  // Calculate the interval (if it's not the very first keystroke)
-					  if (window.lastKeyTime > 0 && (window.lastKeyTime - currentTime) < 120) {
+					  if (window.lastKeyTime > 0 && (window.lastKeyTime - currentTime) < 100) {
+						window.lastKeyTime = currentTime;
 						return;
 					  }
+					  
+					  window.lastKeyTime = currentTime;
 
 					  // Update the reference for the next key press
 					 
