@@ -47,7 +47,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.content .submit li{padding:5px 10px}
 	.content .submit input{padding:5px;width:200px;height:40px;background-color: rgb(85 64 175);color:#fff}
 	table{width:100%;border-collapse: collapse;border:1px solid #ddd;}
-	table tr td{padding:10px;border-bottom:1px solid #ddd}
+	table td{padding:5px;border-bottom:1px solid #ddd}
 	ul{list-style-type:none;}
 	input{height:20px}	
 	
@@ -183,7 +183,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	border-radius:50%;
 	background-color:#000;	
 }
-.top{
+.git_top{
 	position:absolute;
 	width:var(--width,65px);
 	height:var(--height,50px);
@@ -195,7 +195,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	border-radius:45%;
 	background-color:#fff;
 }
-.top:before{
+.git_top:before{
 	content:"";
 	position:absolute;
 	top:-5;
@@ -205,7 +205,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	background-color: #fff;			
 }
 
-.top:after{
+.git_top:after{
 	 content:"";
 	 position:absolute;
 	 top:-5;
@@ -216,7 +216,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	 background-color: #fff;		 
 }
 
-.bottom{
+.git_bottom{
 	position:absolute;
 	width:var(--width,30px);
 	height:var(--height,30px);
