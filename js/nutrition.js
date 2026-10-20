@@ -60,11 +60,11 @@ const Foodname = (function(){
 						ul.top = event.target.offsetTop + event.target.height;
 						
 						const test = /\{.*?"Food_Description_EN".*?\}/g;
-						const regex = new RegExp('\{.*?\"Food_Description_EN\"\:\s*\".*?'+event.target.value+'.*?\".*?\}', "gis");
+						const regex = new RegExp('\{.*?"Food_Description_EN"\:\s*".*?'+event.target.value+'.*?".*?\}', "gis");
 						//const regex = new RegExp("\{.*\"Food_Description_EN\".*\}","gi");
 						const matches = foodName.matchAll(regex);
 						//console.log(foodName);
-						console.log(matches);
+						//console.log(matches);
 
 						//for(const item of Object.values(foodName)){
 						for(const match of matches){
