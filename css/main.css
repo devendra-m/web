@@ -46,7 +46,8 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.content .title{padding:20px;border:1px solid #ddd}
 	.content .submit li{padding:5px 10px}
 	.content .submit input{padding:5px;width:200px;height:40px;background-color: rgb(85 64 175);color:#fff}
-	table{width:100%;padding:10px;border-collapse: collapse;border:1px solid #ddd;}
+	table{width:100%;border-collapse: collapse;border:1px solid #ddd;}
+	table tr td{padding:10px;border-bottom:1px solid #ddd}
 	ul{list-style-type:none;}
 	input{height:20px}	
 	
