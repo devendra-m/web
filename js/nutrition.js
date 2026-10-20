@@ -230,7 +230,7 @@ const Foodname = (function(){
 				Main.subElem(main,[{'e':link}]);		
 				Main.subElem(main,[{'e':div}]);		
 				
-				Main.subElem(content,[{'e':main}];
+				Main.subElem(content,[{'e':main}]);
 				
 				//console.log(nutritionAmounts);						
 				
