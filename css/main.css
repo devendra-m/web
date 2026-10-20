@@ -17,7 +17,7 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.menu .name_container{position: relative;height: 100%;width: 180px;}
 	.menu .name{position:absolute;margin:auto;top:0;bottom:0;height:20px}
 	.menu{padding-right:20px;color:#ffffff}
-	.bottom{background:rgb(85 64 175);width:100%;height:40px;margin-top:80px}
+	.bottom{width:100%;height:80px;}
 	.menu .item{margin:0px;padding-right:10px}
 	.testimonials {position:relative;display:block}	
 	.testimonials > ul{border-style: groove;border-width: 1px;border-radius: 5px;}
