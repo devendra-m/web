@@ -120,14 +120,13 @@ const Foodname = (function(){
 	
 				const nutritionAmounts = [{}];
 				
+				console.log(foodIds);
 				
 				//const matches = nutritionAmount.matchAll(test);
 				
 				for(const foodId of foodIds){	
 					
-					//console.log(item.Food_Code);
-						console.log(foodId.value);
-						break;
+					
 					
 					/*
 					Main.query(foodId.closest('li.row'),'.weightGram');
