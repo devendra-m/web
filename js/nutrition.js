@@ -196,10 +196,17 @@ const Foodname = (function(){
 				const link = Main.newElem('div',{'class':'link'});
 				const div = Main.newElem('div',{'class':'nutrients'});
 				
+				span = Main.newElem('span',{'class':'back'});
+				span.innerHTML = 'Back';
+				
+				span.addEventListener('click',(e) => Foodname.back(content,contentHtml));
+				
+				Main.subElem(link,[{'e':span}]);								
+				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('thead');
 				let td = Main.newElem('td',{'class':'column-1'});
-
+																				
 				let span = Main.newElem('span',{'class':'name'});
 				span.innerHTML = 'Nutrient';
 				
@@ -207,14 +214,7 @@ const Foodname = (function(){
 				
 				td = Main.newElem('td',{'class':'column-2'});
 				span = Main.newElem('span',{'class':'amount'});
-				span.innerHTML = 'Nutrient Amount [mcg]';
-								
-				span = Main.newElem('span',{'class':'back'});
-				span.innerHTML = 'Back';
-				
-				span.addEventListener('click',(e) => Foodname.back(content,contentHtml));
-				
-				Main.subElem(link,[{'e':span}]);								
+				span.innerHTML = 'Nutrient Amount [mcg]';												
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(div,[{'e':table}]);	
