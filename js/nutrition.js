@@ -103,7 +103,7 @@ const Foodname = (function(){
 		},
 		back(content,html){
 			content.innerHTML = html;
-		}
+		},
 		async submit(e){
 			
 			var foodIds = Main.queryAll(document,'.food_id');		
