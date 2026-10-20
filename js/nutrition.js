@@ -194,10 +194,11 @@ const Foodname = (function(){
 				
 				for(const item of Object.values(nutritionName)){		
 					
-					let nutritionAmountRow.nutrition_amount = 0;
+					let nutritionAmountRow = 0;
 					for(const nutritionAmount of nutritionAmounts){
 						if(nutritionAmount.Nutrition_Code === item.Nutrition_Code){
-							nutritionAmountRow = nutritionAmount;
+							nutritionAmountRow = nutritionAmount.nutrition_amount;
+							break;
 						}
 					}
 					tr = Main.newElem('tr');
@@ -209,8 +210,8 @@ const Foodname = (function(){
 					
 					td = Main.newElem('td',{'class':'column-2'});
 					span = Main.newElem('span',{'class':'amount'});
-					span.innerHTML = nutritionAmountRow.nutrition_amount;																
-										
+					span.innerHTML = nutritionAmountRow;
+					
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
 				
