@@ -101,6 +101,9 @@ const Foodname = (function(){
 			const row = elem.closest('li.row');
 			row.remove();
 		},
+		back(content,html){
+			content.innerHTML = html;
+		}
 		async submit(e){
 			
 			var foodIds = Main.queryAll(document,'.food_id');		
@@ -190,6 +193,9 @@ const Foodname = (function(){
 				
 				//console.log(nutritionAmounts);
 				
+				const link = Main.newElem('div',{'class':'link'});
+				const div = Main.newElem('div',{'class':'nutrients'});
+				
 				const table = Main.newElem('table',{'class':'table'});
 				let tr = Main.newElem('thead');
 				let td = Main.newElem('td',{'class':'column-1'});
@@ -203,8 +209,17 @@ const Foodname = (function(){
 				span = Main.newElem('span',{'class':'amount'});
 				span.innerHTML = 'Nutrient Amount [mcg]';
 								
+				span = Main.newElem('span',{'class':'back'});
+				span.innerHTML = 'Back';
+				
+				span.addEventListener('click',(e) => back(content,contentHtml));
+				
+				Main.subElem(back,[{'e':span}]);								
+				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
-				Main.subElem(content,[{'e':table}]);		
+				Main.subElem(div,[{'e':table}]);	
+				Main.subElem(content,[{'e':link}]);		
+				Main.subElem(content,[{'e':div}]);		
 				
 				//console.log(nutritionAmounts);						
 				
