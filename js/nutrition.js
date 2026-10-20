@@ -195,13 +195,13 @@ const Foodname = (function(){
 				let td = Main.newElem('td',{'class':'column-1'});
 
 				let span = Main.newElem('span',{'class':'name'});
-				span.innerHTML = 'Nutrition Name';
+				span.innerHTML = 'Nutrient';
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				
 				td = Main.newElem('td',{'class':'column-2'});
 				span = Main.newElem('span',{'class':'amount'});
-				span.innerHTML = 'Nutrition Amount [mcg]';
+				span.innerHTML = 'Nutrient Amount [mcg]';
 								
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(content,[{'e':table}]);		
