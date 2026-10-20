@@ -212,9 +212,9 @@ const Foodname = (function(){
 				span = Main.newElem('span',{'class':'back'});
 				span.innerHTML = 'Back';
 				
-				span.addEventListener('click',(e) => back(content,contentHtml));
+				span.addEventListener('click',(e) => Foodname.back(content,contentHtml));
 				
-				Main.subElem(back,[{'e':span}]);								
+				Main.subElem(link,[{'e':span}]);								
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(div,[{'e':table}]);	
