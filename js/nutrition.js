@@ -120,8 +120,6 @@ const Foodname = (function(){
 	
 				const nutritionAmounts = [{}];
 				
-				console.log(foodIds);
-				
 				//const matches = nutritionAmount.matchAll(test);
 				
 				for(const foodId of foodIds){	
@@ -143,6 +141,8 @@ const Foodname = (function(){
 					const foodWeight = weightGram.value;
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
+					
+					console.log(foodId.value);
 					
 					for(const item of nutritionAmount){		
 										
