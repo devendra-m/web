@@ -144,12 +144,10 @@ const Foodname = (function(){
 					
 					for(const item of nutritionAmount){		
 							
-						if(item.Food_Code === 416)
-						console.log(item);
 								
 						if(item.Food_Code === parseInt(foodId.value)){
 							
-							const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
+							const foodNutritionAmount = item.Nutrition_Amount * foodWeight / 100; 
 							
 							let found = false;
 							for(const nutrition of nutritionAmounts){
