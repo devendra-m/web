@@ -147,7 +147,7 @@ const Foodname = (function(){
 								
 						if(item.Food_Code === parseInt(foodId.value)){
 							
-							const foodNutritionAmount = item.Nutrition_Amount * foodWeight / 100; 
+							const foodNutritionAmount = item.Nutrient_Amount * foodWeight / 100; 
 							
 							let found = false;
 							for(const nutrition of nutritionAmounts){
@@ -161,7 +161,7 @@ const Foodname = (function(){
 							
 							
 							if(!found)
-								nutritionAmounts.push({'nutrition_code':item.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
+								nutritionAmounts.push({'nutrition_code':item.Nutrient_Code,'nutrition_amount':foodNutritionAmount});
 								
 							break;
 						}
@@ -214,7 +214,7 @@ const Foodname = (function(){
 					
 					let nutritionAmountRow = 0;
 					for(const nutritionAmount of nutritionAmounts){
-						if(nutritionAmount.Nutrition_Code === item.Nutrition_Code){
+						if(nutritionAmount.Nutrition_Code === item.Nutrient_Code){
 							
 							nutritionAmountRow = nutritionAmount.nutrition_amount;
 							break;
