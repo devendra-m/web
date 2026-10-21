@@ -40,6 +40,36 @@ const Foodname = (function(){
 				this.loadNames();																														
 			}					
 		},
+		loadName(event,foodName){
+			var items = Main.query(document,'.food .items');
+						
+			if(items)
+				items.remove();
+			
+			const ul = Main.newElem('ul',{'class':'items'});
+			ul.style.position = 'absolute';
+			ul.left = event.target.offsetLeft;
+			ul.top = event.target.offsetTop + event.target.height;
+			
+			for(const item of Object.values(foodName)){
+				
+				const regex = new RegExp(".*"+event.target.value, "i");
+				
+				if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
+					//const item = JSON.parse(match[0]);
+					const li = Main.newElem('li',{'class':'item'});	
+					const labelName = Main.newElem('span',{'class':'label'});
+					labelName.id = item.Food_Code;
+					labelName.innerHTML = item.Food_Description_EN;
+					
+					labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target,ul));
+									
+					Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
+				}
+			}
+			//}
+			Main.subElem(event.target.parentElement,[{'e':ul}]);
+		},
 		loadNames(){
 			const names = Main.queryAll(document,'.food .name');
 			
@@ -50,42 +80,15 @@ const Foodname = (function(){
 						if (event.defaultPrevented) {
 							return;
 						}
-						
+											  
+					  if(window.nameTimeout)
+						clearTimeout(window.nameTimeout);
 					  
-					  
+					  //console.log('test'); 
+					  window.nameTimeout = setTimeout(Foodname.loadName, 500,event,foodName);
 					 
-
-					  // Update the reference for the next key press
-					 
-											
-						var items = Main.query(document,'.food .items');
-						
-						if(items)
-							items.remove();
-						
-						const ul = Main.newElem('ul',{'class':'items'});
-						ul.style.position = 'absolute';
-						ul.left = event.target.offsetLeft;
-						ul.top = event.target.offsetTop + event.target.height;
-						
-						for(const item of Object.values(foodName)){
-							
-							const regex = new RegExp(".*"+event.target.value, "i");
-							
-							if(event.target.value.length > 0 && item.Food_Description_EN.match(regex)){
-								//const item = JSON.parse(match[0]);
-								const li = Main.newElem('li',{'class':'item'});	
-								const labelName = Main.newElem('span',{'class':'label'});
-								labelName.id = item.Food_Code;
-								labelName.innerHTML = item.Food_Description_EN;
-								
-								labelName.addEventListener('click',(e) => Foodname.nameSelected(e,event.target,ul));
-												
-								Main.subElem(ul,[{'e':li,'>':[{'e':labelName}]}]);		
-							}
-						}
-						//}
-						Main.subElem(event.target.parentElement,[{'e':ul}]);
+					  // Update the reference for the next key press					 
+																	
 					});	
 				}
 		},
