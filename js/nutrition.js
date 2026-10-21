@@ -85,7 +85,7 @@ const Foodname = (function(){
 						clearTimeout(window.nameTimeout);
 					  
 					  //console.log('test'); 
-					  window.nameTimeout = setTimeout(Foodname.loadName, 500,event,foodName);
+					  window.nameTimeout = setTimeout(Foodname.loadName, 200,event,foodName);
 					 
 					  // Update the reference for the next key press					 
 																	
