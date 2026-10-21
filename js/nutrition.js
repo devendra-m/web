@@ -198,7 +198,7 @@ const Foodname = (function(){
 				
 				//console.log(nutritionAmounts);
 				
-				const main = Main.newElem('div',{'class':'main'});
+				const main = Main.newElem('div',{'class':'food_main'});
 				const link = Main.newElem('div',{'class':'link'});
 				const div = Main.newElem('div',{'class':'nutrients'});
 				
