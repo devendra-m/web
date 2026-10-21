@@ -146,7 +146,7 @@ const Foodname = (function(){
 					*/
 					const weightGram = Main.query(foodId.closest('li.row'),'.weightGram');
 					
-					const foodWeight = weightGram.value;
+					const foodWeight = parseInt(weightGram.value);
 					//let foodNutritionAmount = 0;
 					//let nutritionAmountRow = null;
 					
