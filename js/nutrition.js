@@ -215,11 +215,11 @@ const Foodname = (function(){
 			
 		},
 		
-		submit(e){						
+		aysnc submit(e){						
 			Loader.load(1);			
 			
 			try {
-				this.nutrientslist();	
+				await this.nutrientslist();	
 				} catch (error) {
 				console.error(error.message);
 			  }
