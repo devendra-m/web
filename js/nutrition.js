@@ -236,6 +236,8 @@ const Loader = (function(){
 			const loaderDiv = Main.query(document,'.loader');
 			loaderDiv.style.display = 'block';	
 			
+			console.log('test');
+			
 			if(n > 360)
 				window.deg = 0;
 			
