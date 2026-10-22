@@ -212,13 +212,21 @@ const Foodname = (function(){
 				}
 				
 			}
-			Loader.clearLoader();
+			
 		},
 		
 		submit(e){						
 			Loader.load(1);			
-			this.nutrientslist();			
 			
+			try {
+				this.nutrientslist();	
+				} catch (error) {
+				console.error(error.message);
+			  }
+			  finally{
+				Loader.clearLoader();
+			  }
+				//Loader.clearLoader();					
 		}
 	}
 })();
