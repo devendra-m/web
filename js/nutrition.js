@@ -212,12 +212,13 @@ const Foodname = (function(){
 				}
 				
 			}
+			Loader.clearLoader();
 		},
 		
 		submit(e){						
 			Loader.load(1);			
-			await Foodname.nutrientslist();			
-			Loader.clearLoader();
+			this.nutrientslist();			
+			
 		}
 	}
 })();
