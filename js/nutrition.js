@@ -110,51 +110,30 @@ const Foodname = (function(){
 		},
 		async submit(e){
 			
-			Loader.load(1);
-			
 			var foodIds = Main.queryAll(document,'.food_id');		
-			
-			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
-								
+						
 			const content = Main.query(document,'.content');
 			const foodMain = Main.query(document,'.food_main');
-			//const contentHtml = content.innerHTML;
-			//content.innerHTML = '';
 						
 			const response = await fetch('/data/Nutrient_Name.json');
 			const response1 = await fetch('/data/Nutrient_Amount.json');
+			
+			Loader.load(1);
 						
 			if(response.ok && response1.ok){
 				const nutritionName = await response.json();
 				const nutritionAmount = await response1.json();
 	
-				let nutritionAmounts = [];
-				
-				//const matches = nutritionAmount.matchAll(test);
-				
+				let nutritionAmounts = [];			
+
 				for(const foodId of foodIds){	
-					
-					
-					
-					/*
-					Main.query(foodId.closest('li.row'),'.weightGram');
-					
-					const match = foodId.name.match(regex);
-					console.log(match);
-					console.log(foodId.name);
-					const index = match[1];
-					
-					const weightGram = Main.query(document,'weightGrams['+index+']');
-					*/
+
 					const weightGram = Main.query(foodId.closest('li.row'),'.weightGram');
 					
 					const foodWeight = parseInt(weightGram.value);
-					//let foodNutritionAmount = 0;
-					//let nutritionAmountRow = null;
 					
 					for(const item of nutritionAmount){		
-							
-								
+															
 						if(item.FC === parseInt(foodId.value)){
 							
 							const foodNutritionAmount = item.NA * foodWeight / 100; 
@@ -167,38 +146,13 @@ const Foodname = (function(){
 									break;
 								}
 							}							
-							
-							
-							
+
 							if(!found)
 								nutritionAmounts.push({'nutrition_code':item.NC,'nutrition_amount':foodNutritionAmount});
-								
-							//break;
-						}
-					}
-					
-					/*const test = /\{"Food_Code":${foodId}.*?\}/g;
-					const matches = nutritionAmount.matchAll(test);
 
-					
-					for(const match of matches){
-						
-						const nutrition = match[0];
-						const foodNutritionAmount = nutrition.Nutrition_Amount * foodWeight / 100; 
-						nutritionAmounts.push({'nutrition_code':nutrition.Nutrition_Code,'nutrition_amount':foodNutritionAmount});						
-					}*/
-					//const nutritionAmountRow = nutritionAmount.find(item => item.Food_Code === foodId.value);
-					//console.log(nutritionAmountRow);
-					//const foodNutritionAmount = Math.floor(nutritionAmountRow.Nutrition_Amount * foodWeight / 100); 
-					
-					
-				
-					//console.log({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
-					
-					//nutritionAmounts.push({'nutrition_code':nutritionAmountRow.Nutrition_Code,'nutrition_amount':foodNutritionAmount});
-				}
-				
-				//console.log(nutritionAmounts);
+						}
+					}					
+				}							
 				
 				const main = Main.newElem('div',{'class':'nutrition_main'});
 				const link = Main.newElem('div',{'class':'link'});
@@ -225,11 +179,8 @@ const Foodname = (function(){
 				span.innerHTML = 'Nutrient Amount [mcg]';												
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
-				Main.subElem(div,[{'e':table}]);	
+				Main.subElem(div,[{'e':table}]);					
 				
-				//Main.subElem(main,[{'e':div}]);		
-				
-				//content.innerHTML = ''; 
 				foodMain.style.display = 'none';
 				
 				Main.subElem(main,[{'e':link}]);		
@@ -237,12 +188,8 @@ const Foodname = (function(){
 				
 				Main.subElem(content,[{'e':main}]);
 				
-				//console.log(nutritionAmounts);						
-				
 				for(const item of Object.values(nutritionName)){		
-					
-					//console.log(nutritionAmounts );
-					
+				
 					let nutritionAmountRow = 0;
 					for(const nutritionAmount of nutritionAmounts){
 						if(nutritionAmount.nutrition_code === item.Nutrient_Code){
@@ -251,8 +198,6 @@ const Foodname = (function(){
 							break;
 						}
 					}
-					
-					//console.log(nutritionAmountRow);
 					
 					tr = Main.newElem('tr');
 					td = Main.newElem('td',{'class':'column-1'});
