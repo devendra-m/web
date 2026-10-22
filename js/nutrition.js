@@ -216,7 +216,7 @@ const Foodname = (function(){
 		
 		submit(e){						
 			Loader.load(1);			
-			await this.nutrientslist();			
+			await Foodname.nutrientslist();			
 			Loader.clearLoader();
 		}
 	}
