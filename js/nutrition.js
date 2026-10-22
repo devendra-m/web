@@ -110,6 +110,8 @@ const Foodname = (function(){
 		},
 		async submit(e){
 			
+			Loader.load(1);
+			
 			var foodIds = Main.queryAll(document,'.food_id');		
 			
 			//var weightGrams = Main.queryAll(document,'input[foodId*="["]');		
@@ -265,7 +267,7 @@ const Foodname = (function(){
 					
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
-				
+				Loader.clearLoader();
 			}
 		}
 	}
