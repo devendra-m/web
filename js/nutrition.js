@@ -110,15 +110,17 @@ const Foodname = (function(){
 		},
 		async submit(e){
 			
+			Loader.load(1);
+			
 			var foodIds = Main.queryAll(document,'.food_id');		
-						
+								
 			const content = Main.query(document,'.content');
 			const foodMain = Main.query(document,'.food_main');
 						
 			const response = await fetch('/data/Nutrient_Name.json');
 			const response1 = await fetch('/data/Nutrient_Amount.json');
 			
-			Loader.load(1);
+			
 						
 			if(response.ok && response1.ok){
 				const nutritionName = await response.json();
@@ -212,8 +214,9 @@ const Foodname = (function(){
 					
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
-				Loader.clearLoader();
+				
 			}
+			Loader.clearLoader();
 		}
 	}
 })();
