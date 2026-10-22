@@ -108,10 +108,8 @@ const Foodname = (function(){
 			content.style.display = 'block';
 			main.remove();
 		},
-		async submit(e){
-			
-			Loader.load(1);
-			
+		
+		async nutrientslist(){
 			var foodIds = Main.queryAll(document,'.food_id');		
 								
 			const content = Main.query(document,'.content');
@@ -216,6 +214,14 @@ const Foodname = (function(){
 				}
 				
 			}
+		},
+		
+		submit(e){
+			
+			Loader.load(1);
+			
+			this.nutrientslist();
+			
 			Loader.clearLoader();
 		}
 	}
