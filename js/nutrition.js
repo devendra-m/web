@@ -231,31 +231,20 @@ const Loader = (function(){
 	return {
 		load(n){		
 	
-			if(!window.loaderIds)
-				window.loaderIds = [];
-				
-			if(!window.deg)
-				window.deg = 0;
+			
 			
 			const loaderDiv = Main.query(document,'.loader');
 			loaderDiv.style.display = 'block';	
 			
-			if(n > 360)
-				window.deg = 0;
-			
-			loaderDiv.style.transform = 'rotate('+n+'deg)'; 
-			
-			const loaderId = setTimeout(Loader.load,1,window.deg++);
-			window.loaderIds.push(loaderId);
+		
 		},
 		clearLoader(){
-			window.deg = 0;
+			
 		
 			const loader = Main.query(document,'.loader');
 			loader.style.display = 'none';			
 		
-			for(const loaderId of window.loaderIds)
-				window.clearTimeout(loaderId);
+			
 		}
 	}
 })();
