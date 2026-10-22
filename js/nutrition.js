@@ -110,7 +110,15 @@ const Foodname = (function(){
 		},
 		
 		async nutrientslist(){
-			var foodIds = Main.queryAll(document,'.food_id');		
+			
+			
+		},
+		
+		async submit(e){						
+			Loader.load(1);			
+			
+			try {
+				var foodIds = Main.queryAll(document,'.food_id');		
 								
 			const content = Main.query(document,'.content');
 			const foodMain = Main.query(document,'.food_main');
@@ -212,14 +220,6 @@ const Foodname = (function(){
 				}
 				
 			}
-			
-		},
-		
-		async submit(e){						
-			Loader.load(1);			
-			
-			try {
-				await this.nutrientslist();	
 				} catch (error) {
 				console.error(error.message);
 			  }
