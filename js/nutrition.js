@@ -107,12 +107,7 @@ const Foodname = (function(){
 		back(content,main){
 			content.style.display = 'block';
 			main.remove();
-		},
-		
-		async nutrientslist(){
-			
-			
-		},
+		},		
 		
 		async submit(e){						
 			Loader.load(1);			
