@@ -230,21 +230,13 @@ const Loader = (function(){
 
 	return {
 		load(n){		
-	
-			
-			
+
 			const loaderDiv = Main.query(document,'.loader');
 			loaderDiv.style.display = 'block';	
-			
-		
 		},
 		clearLoader(){
-			
-		
 			const loader = Main.query(document,'.loader');
 			loader.style.display = 'none';			
-		
-			
 		}
 	}
 })();
