@@ -116,9 +116,7 @@ const Foodname = (function(){
 			const foodMain = Main.query(document,'.food_main');
 						
 			const response = await fetch('/data/Nutrient_Name.json');
-			const response1 = await fetch('/data/Nutrient_Amount.json');
-			
-			
+			const response1 = await fetch('/data/Nutrient_Amount.json');					
 						
 			if(response.ok && response1.ok){
 				const nutritionName = await response.json();
@@ -216,12 +214,9 @@ const Foodname = (function(){
 			}
 		},
 		
-		submit(e){
-			
-			Loader.load(1);
-			
-			this.nutrientslist();
-			
+		submit(e){						
+			Loader.load(1);			
+			this.nutrientslist();			
 			Loader.clearLoader();
 		}
 	}
