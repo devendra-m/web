@@ -215,7 +215,7 @@ const Foodname = (function(){
 			
 		},
 		
-		aysnc submit(e){						
+		async submit(e){						
 			Loader.load(1);			
 			
 			try {
