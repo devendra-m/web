@@ -209,7 +209,7 @@ const Foodname = (function(){
 					
 					td = Main.newElem('td',{'class':'column-2'});
 					span = Main.newElem('span',{'class':'amount'});
-					span.innerHTML = nutritionAmountRow;
+					span.innerHTML = Math.round(nutritionAmountRow * 100) / 100;
 					
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
