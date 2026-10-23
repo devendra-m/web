@@ -80,6 +80,8 @@ const Foodname = (function(){
 						if (event.defaultPrevented) {
 							return;
 						}
+						
+					  event.target.setAttribute('autocomplete', 'off');
 											  
 					  if(window.nameTimeout)
 						clearTimeout(window.nameTimeout);
