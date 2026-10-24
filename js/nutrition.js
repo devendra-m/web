@@ -106,7 +106,8 @@ const Foodname = (function(){
 		},
 		back(content,main){
 			content.style.display = 'block';
-			main.remove();
+			const nutritionMain = Main.query(document,'.'+main);
+			nutritionMain.remove();
 		},		
 		
 		async submit(e){		
@@ -164,7 +165,7 @@ const Foodname = (function(){
 				let span = Main.newElem('span',{'class':'back'});
 				span.innerHTML = 'Back';
 				
-				span.addEventListener('click',(e) => Foodname.back(foodMain,main));
+				span.addEventListener('click',(e) => Foodname.back(foodMain,'nutrition_main'));
 				
 				Main.subElem(link,[{'e':span}]);								
 				
