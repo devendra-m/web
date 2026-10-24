@@ -109,7 +109,9 @@ const Foodname = (function(){
 			main.remove();
 		},		
 		
-		async submit(e){						
+		async submit(e){		
+			e.preventDefault();
+										
 			Loader.load(1);			
 			
 			try {
