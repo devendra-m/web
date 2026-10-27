@@ -39,8 +39,8 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.food .rows li{list-style-type:none;}
 	.food .rows li.row li{display:inline-block;min-height:20px;height:auto;padding:5px 10px;}	
 	.food .rows li.row ul{padding-left:0px}	
-	.food .rows li.column-1 {width:350px}
-	.food .rows li.column-2 {width:110px}
+	/*.food .rows li.column-1 {width:350px}*/
+	/*.food .rows li.column-2 {width:110px} */
 	.food .rows li.column-3 {width:100px}	
 	.food .template{display:none}
 	.content .title{padding:20px;border:1px solid #ddd}
@@ -53,6 +53,33 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	input{height:20px}	
 	.link .back{padding-bottom:50px;cursor:pointer}
 	
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+	.food .heading{display:none}
+	.label-field-potrait{display:block}
+	form input{margin-top:10px}
+	ul{padding:0px}
+	.food .name{width:100%}
+	.food .rows li{
+		box-sizing: border-box;
+		width:100%
+	}
+	.food ul.items{
+		width:100%
+	} 
+	.food .rows li.row ul:first-child{
+		border:1px solid #ddd;
+		margin-bottom:10px;
+	}
+	
+}
+@media only screen and (min-width: 767px) {
+	.label-field-potrait{display:none}
+	form input{margin-top:0px}
+	ul{padding-left:0px}
+	.food .rows li.column-1 {width:350px}
+	.food .rows li.column-2 {width:110px}
+}
+
 {box-sizing:border-box}
 	
 /* Next & previous buttons */

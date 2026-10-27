@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="/css/main.css">
 		<script src="/js/main.js"></script>
 		<script src="/js/nutrition.js"></script>
-		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body onload="onload(Foodname)">		
 	<div>
@@ -19,7 +19,7 @@
 		 <div class="food">	
 			<form>
 			<ul class="rows">
-				<li class="row">
+				<li class="row heading">
 					<ul>
 						<li class="column-1"><span>Food Name</span></li>
 						<li class="column-2"><span>Weight Grams</span></li>
@@ -29,10 +29,12 @@
 				<li class="row">
 					<ul>
 						<li class="column-1">
+							<span class="label-field-potrait">Food Name</span>
 							<input type="text" class="name" name="name[]" />
 							<input type="hidden" class="food_id" name="id[]"/>
 						</li>
 						<li class="column-2">
+							<span class="label-field-potrait">Weight Grams</span>
 							<input type="text" class="weightGram" name="weightGram[]" />
 						</li>
 						<li class="column-3">
@@ -43,10 +45,12 @@
 				<li class="row">	
 					<ul class="template">
 						<li class="column-1">
+							<span class="label-field-potrait">Food Name</span>
 							<input type="text" class="name" name="name[]" />
 							<input type="hidden" class="food_id" name="id[]"/>
 						</li>
 						<li class="column-2">
+							<span class="label-field-potrait">Weight Grams</span>
 							<input type="text" class="weightGram" name="weightGram[]" />
 						</li>
 						<li class="column-3">
