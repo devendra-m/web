@@ -54,6 +54,9 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	.link .back{padding-bottom:50px;cursor:pointer}
 	
 @media only screen and (min-width: 200px) and (max-width: 767px) {
+	.name_container .name{
+		display:none;
+	}
 	.food .heading{display:none}
 	.label-field-potrait{display:block}
 	form input{margin-top:10px}
