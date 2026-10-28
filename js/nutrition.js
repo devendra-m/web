@@ -250,7 +250,8 @@ const Loader = (function(){
 			loaderDiv.style.top = top + 'px';			
 			
 			//console.log(loaderDiv.offsetParent.left);
-			//console.log(window.innerWidth);
+			console.log(window.scrollY);
+			console.log(window.innerHeight);
 			//console.log(loaderDiv.style.left);
 
 		},
