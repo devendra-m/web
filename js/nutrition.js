@@ -244,7 +244,7 @@ const Loader = (function(){
 			//var screenWidth = screen.width;
 			
 			var left = Math.floor((window.innerWidth - width) / 2);
-			var top = window.scrollY + Math.floor((window.innerHeight + height) / 2);
+			var top = window.scrollY + Math.floor((window.innerHeight - height) / 2);
 			
 			loaderDiv.style.left = left + 'px';
 			loaderDiv.style.top = top + 'px';			
