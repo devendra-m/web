@@ -236,6 +236,16 @@ const Loader = (function(){
 
 			const loaderDiv = Main.query(document,'.loader');
 			loaderDiv.style.display = 'block';	
+			
+			var height = loaderDiv.height;
+			var width = loaderDiv.width;
+			
+			var screenHeight = screen.height;
+			var screenWidth = screen.width;
+			
+			var left = Math.floor((screenWidth + width) / 2);
+			var top = Math.floor((screenHeight + height) / 2);
+
 		},
 		clearLoader(){
 			const loader = Main.query(document,'.loader');
