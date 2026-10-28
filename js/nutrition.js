@@ -251,7 +251,7 @@ const Loader = (function(){
 			
 			console.log(loaderDiv.offsetParent.left);
 			console.log(window.innerWidth);
-			console.log(loaderDiv.style.left);
+			//console.log(loaderDiv.style.left);
 
 		},
 		clearLoader(){

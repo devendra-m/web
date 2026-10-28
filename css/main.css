@@ -270,9 +270,9 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	border: 1px solid #ddd;
     border-radius: 5%;
     text-align: center;
-    height:10px;
-	/*height: 40px; 
-	border-radius: 50%; 
+	height: 40px; 
+	background:#fff;
+	/*border-radius: 50%; 
 	border-width: 6px; 
 	border-style: solid; 
 	border-color: rgb(85 64 175) rgb(243, 243, 243) rgb(243, 243, 243); 		
