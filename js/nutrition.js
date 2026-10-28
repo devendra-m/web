@@ -247,9 +247,9 @@ const Loader = (function(){
 			var top = window.scrollY + Math.floor((window.innerHeight - height) / 2);
 			
 			//loaderDiv.style.left = left + 'px';
-			//loaderDiv.style.top = top + 'px';			
+			loaderDiv.style.top = top + 'px';			
 			
-			console.log(loaderDiv.offsetParent.top);
+			//console.log(loaderDiv.offsetParent.top);
 			//console.log(window.scrollY);
 			//console.log(window.innerHeight);
 			//console.log(loaderDiv.style.top);

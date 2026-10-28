@@ -264,9 +264,9 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	position: absolute; 
 	margin: auto; 
 	left: 0;
-	top: 0;
 	right: 0;
-	bottom: 0;	
+	/*top: 0;*/	
+	/*bottom: 0;*/	
 	width: 175px;
 	border: 1px solid #ddd;
     border-radius: 5%;
