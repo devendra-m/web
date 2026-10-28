@@ -252,6 +252,7 @@ const Loader = (function(){
 			//console.log(loaderDiv.offsetParent.left);
 			console.log(window.scrollY);
 			console.log(window.innerHeight);
+			console.log(loaderDiv.style.top);
 			//console.log(loaderDiv.style.left);
 
 		},
