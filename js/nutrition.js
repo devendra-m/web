@@ -237,8 +237,8 @@ const Loader = (function(){
 			const loaderDiv = Main.query(document,'.loader');
 			loaderDiv.style.display = 'block';	
 			
-			var height = loaderDiv.height;
-			var width = loaderDiv.width;
+			var height = loaderDiv.style.height;
+			var width = loaderDiv.style.width;
 			
 			var screenHeight = screen.height;
 			var screenWidth = screen.width;
