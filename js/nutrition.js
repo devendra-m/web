@@ -245,6 +245,9 @@ const Loader = (function(){
 			
 			var left = Math.floor((window.innerWidth + width) / 2);
 			var top = window.scrollTop + Math.floor((window.innerHeight + height) / 2);
+			
+			console.log(window.scrollTop);
+			console.log(window.innerHeight);
 
 		},
 		clearLoader(){
