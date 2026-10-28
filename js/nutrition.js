@@ -251,7 +251,7 @@ const Loader = (function(){
 			
 			console.log(window.scrollY);
 			console.log(window.innerHeight);
-			console.log(top);
+			console.log(loaderDiv.style.top);
 
 		},
 		clearLoader(){
