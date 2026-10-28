@@ -240,11 +240,14 @@ const Loader = (function(){
 			var height = loaderDiv.style.height;
 			var width = loaderDiv.style.width;
 			
-			var screenHeight = screen.height;
-			var screenWidth = screen.width;
+			//var screenHeight = screen.height;
+			//var screenWidth = screen.width;
 			
 			var left = Math.floor((window.innerWidth + width) / 2);
 			var top = window.scrollY + Math.floor((window.innerHeight + height) / 2);
+			
+			loaderDiv.style.left = left;
+			loaderDiv.style.top = top;			
 			
 			console.log(window.scrollY);
 			console.log(window.innerHeight);
