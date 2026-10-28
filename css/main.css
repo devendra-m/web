@@ -279,4 +279,14 @@ body{margin:0px;font-family:Arial, Helvetica, sans-serif}
 	animation: 1s linear 0s infinite;*/
 	display:none;
 }
-
+.loader-content{
+	position:relative;
+}
+.loader-text{
+	position: absolute; 
+	margin: auto; 
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;	
+}
