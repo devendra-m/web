@@ -180,7 +180,7 @@ const Foodname = (function(){
 				
 				td = Main.newElem('td',{'class':'column-2'});
 				span = Main.newElem('span',{'class':'amount'});
-				span.innerHTML = 'Nutrient Amount [mcg]';												
+				span.innerHTML = 'Nutrient Amount';												
 				
 				Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);
 				Main.subElem(div,[{'e':table}]);					
@@ -212,7 +212,7 @@ const Foodname = (function(){
 					
 					td = Main.newElem('td',{'class':'column-2'});
 					span = Main.newElem('span',{'class':'amount'});
-					span.innerHTML = Math.round(nutritionAmountRow * 100) / 100;
+					span.innerHTML = (Math.round(nutritionAmountRow * 100) / 100) + item.Nutrient_Unit;
 					
 					Main.subElem(table,[{'e':tr,'>':[{'e':td,'>':[{'e':span}]}]}]);		
 				}
