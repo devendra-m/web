@@ -249,8 +249,8 @@ const Loader = (function(){
 			//loaderDiv.style.left = left + 'px';
 			loaderDiv.style.top = top + 'px';			
 			
-			console.log(loaderDiv.offsetParent.left);
-			console.log(window.innerWidth);
+			//console.log(loaderDiv.offsetParent.left);
+			//console.log(window.innerWidth);
 			//console.log(loaderDiv.style.left);
 
 		},
