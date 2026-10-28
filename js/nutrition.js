@@ -249,8 +249,8 @@ const Loader = (function(){
 			loaderDiv.style.left = left + 'px';
 			loaderDiv.style.top = top + 'px';			
 			
-			console.log(window.scrollY);
-			console.log(window.innerHeight);
+			console.log(window.width);
+			console.log(window.innerWidth);
 			console.log(loaderDiv.style.top);
 
 		},
