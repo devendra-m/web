@@ -243,8 +243,8 @@ const Loader = (function(){
 			var screenHeight = screen.height;
 			var screenWidth = screen.width;
 			
-			var left = Math.floor((screenWidth + width) / 2);
-			var top = window.scrollTop+Math.floor((screenHeight + height) / 2);
+			var left = Math.floor((window.innerWidth + width) / 2);
+			var top = window.scrollTop + Math.floor((window.innerHeight + height) / 2);
 
 		},
 		clearLoader(){
