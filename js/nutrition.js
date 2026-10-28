@@ -238,18 +238,18 @@ const Loader = (function(){
 			loaderDiv.style.display = 'block';	
 			
 			var height = loaderDiv.offsetHeight;
-			var width = loaderDiv.offsetWidth;
+			//var width = loaderDiv.offsetWidth;
 			
 			//var screenHeight = screen.height;
 			//var screenWidth = screen.width;
 			
-			var left = Math.floor((window.innerWidth - width) / 2);
+			//var left = Math.floor((window.innerWidth - width) / 2);
 			var top = window.scrollY + Math.floor((window.innerHeight - height) / 2);
 			
-			loaderDiv.style.left = left + 'px';
+			//loaderDiv.style.left = left + 'px';
 			loaderDiv.style.top = top + 'px';			
 			
-			console.log(width);
+			console.log(loaderDiv.offsetParent.left);
 			console.log(window.innerWidth);
 			console.log(loaderDiv.style.left);
 
