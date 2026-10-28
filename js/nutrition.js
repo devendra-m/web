@@ -251,7 +251,7 @@ const Loader = (function(){
 			
 			console.log(width);
 			console.log(window.innerWidth);
-			console.log(loaderDiv.style.top);
+			console.log(loaderDiv.style.left);
 
 		},
 		clearLoader(){
