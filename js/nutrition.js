@@ -5,6 +5,7 @@ const Foodname = (function(){
 	return {
 		async load(){
 
+			
 			const response = await fetch(foodUrl);
 
 			if(response.ok){
@@ -115,6 +116,9 @@ const Foodname = (function(){
 										
 			Loader.load(1);			
 			
+			const jsonparts = {};
+			const range = 200;
+			
 			try {
 				var foodIds = Main.queryAll(document,'.food_id');		
 								
@@ -126,7 +130,16 @@ const Foodname = (function(){
 						
 			if(response.ok && response1.ok){
 				const nutritionName = await response.json();
-				const nutritionAmount = await response1.json();
+				const nutritionAmount = await response1.json();				
+				
+				for(const item of Object.values(nutritionAmount)){
+					const part = (Math.floor(item.FC / range)) + 1;
+					const partName = 'nutrient_amount_'+part;
+					if(!jsonparts[partName])
+						jsonparts[partName]= [];
+						
+					jsonparts[partName].push(item);
+				}
 	
 				let nutritionAmounts = [];			
 
@@ -136,7 +149,15 @@ const Foodname = (function(){
 					
 					const foodWeight = parseInt(weightGram.value);
 					
-					for(const item of nutritionAmount){		
+					const part = (Math.floor(parseInt(foodId.value) / range)) + 1;
+					const partName = 'nutrient_amount_'+part;
+										
+					let partFood = [];
+										
+					if(jsonparts[partName])
+						partFood = jsonparts[partName];										
+					
+					for(const item of partFood){		
 															
 						if(item.FC === parseInt(foodId.value)){
 							
